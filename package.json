@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@types/three": "^0.175.0",
+    "postprocessing": "^6.37.2",
+    "three": "^0.175.0"
+  }
+}

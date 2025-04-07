@@ -1,0 +1,5810 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "ABE",
+        "AIRPT_NAME": "Allentown/Bethlehem/Easton, PA",
+        "TOT_ENP": 25416
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.442797,
+          40.651773
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "ABI",
+        "AIRPT_NAME": "Abilene, TX",
+        "TOT_ENP": 9355
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.6819000244,
+          32.4113006592
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "ABQ",
+        "AIRPT_NAME": "Albuquerque, NM",
+        "TOT_ENP": 108248
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.608925,
+          35.039976
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "ABR",
+        "AIRPT_NAME": "Aberdeen, SD",
+        "TOT_ENP": 3345
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -98.42179870605467,
+          45.449100494384766
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "ABY",
+        "AIRPT_NAME": "Albany, GA",
+        "TOT_ENP": 4072
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.196215,
+          31.532946
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "ACK",
+        "AIRPT_NAME": "Nantucket, MA",
+        "TOT_ENP": 18120
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.06020355,
+          41.25310135
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "ACT",
+        "AIRPT_NAME": "Waco, TX",
+        "TOT_ENP": 6976
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.23049926757812,
+          31.611299514770508
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "ACV",
+        "AIRPT_NAME": "Arcata/Eureka, CA",
+        "TOT_ENP": 7827
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -124.109,
+          40.978101
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "ACY",
+        "AIRPT_NAME": "Atlantic City, NJ",
+        "TOT_ENP": 13933
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.57720184326172,
+          39.45759963989258
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "ADK",
+        "AIRPT_NAME": "Adak Island, AK",
+        "TOT_ENP": 494
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -176.642783,
+          51.883564
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "ADQ",
+        "AIRPT_NAME": "Kodiak, AK",
+        "TOT_ENP": 3993
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -152.4940033,
+          57.75
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "AEX",
+        "AIRPT_NAME": "Alexandria, LA",
+        "TOT_ENP": 11700
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -92.549797,
+          31.3274
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "AGS",
+        "AIRPT_NAME": "Augusta, GA",
+        "TOT_ENP": 21942
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.9645,
+          33.3699
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "AKN",
+        "AIRPT_NAME": "King Salmon, AK",
+        "TOT_ENP": 2532
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -156.651965,
+          58.677845
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "ALB",
+        "AIRPT_NAME": "Albany, NY",
+        "TOT_ENP": 69579
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.80169677734375,
+          42.74829864501953
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "ALO",
+        "AIRPT_NAME": "Waterloo, IA",
+        "TOT_ENP": 3020
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -92.40029907226562,
+          42.557098388671875
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "ALW",
+        "AIRPT_NAME": "Walla Walla, WA",
+        "TOT_ENP": 3400
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.288002,
+          46.09489822
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "AMA",
+        "AIRPT_NAME": "Amarillo, TX",
+        "TOT_ENP": 25672
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.706001,
+          35.219398
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "ANC",
+        "AIRPT_NAME": "Anchorage, AK",
+        "TOT_ENP": 113265
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -149.992561,
+          61.179004
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "APN",
+        "AIRPT_NAME": "Alpena, MI",
+        "TOT_ENP": 2536
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.56030273,
+          45.0780983
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "ART",
+        "AIRPT_NAME": "Watertown, NY",
+        "TOT_ENP": 3168
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.021698,
+          43.991901
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "ASE",
+        "AIRPT_NAME": "Aspen, CO",
+        "TOT_ENP": 25360
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.869003,
+          39.223202
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "ATL",
+        "AIRPT_NAME": "Atlanta, GA",
+        "TOT_ENP": 1588018
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.428101,
+          33.6367
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "ATW",
+        "AIRPT_NAME": "Appleton, WI",
+        "TOT_ENP": 30514
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.519096,
+          44.258099
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "ATY",
+        "AIRPT_NAME": "Watertown, SD",
+        "TOT_ENP": 1213
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.15470123,
+          44.91400146
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "AUS",
+        "AIRPT_NAME": "Austin, TX",
+        "TOT_ENP": 343375
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.662015,
+          30.197535
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "AVL",
+        "AIRPT_NAME": "Asheville, NC",
+        "TOT_ENP": 53666
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.541801,
+          35.436199
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "AVP",
+        "AIRPT_NAME": "Scranton/Wilkes-Barre, PA",
+        "TOT_ENP": 17800
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.72339630130001,
+          41.338500976599995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "AZA",
+        "AIRPT_NAME": "Phoenix, AZ",
+        "TOT_ENP": 24375
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.654999,
+          33.3078
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "AZO",
+        "AIRPT_NAME": "Kalamazoo, MI",
+        "TOT_ENP": 11106
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -85.5521011352539,
+          42.234901428222656
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "BDL",
+        "AIRPT_NAME": "Hartford, CT",
+        "TOT_ENP": 112530
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.688066,
+          41.93851
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "BET",
+        "AIRPT_NAME": "Bethel, AK",
+        "TOT_ENP": 3408
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -161.8379974,
+          60.77980042
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "BFF",
+        "AIRPT_NAME": "Scottsbluff, NE",
+        "TOT_ENP": 3170
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.5960007,
+          41.87400055
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "BFL",
+        "AIRPT_NAME": "Bakersfield, CA",
+        "TOT_ENP": 11564
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.056999,
+          35.433601
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "BGM",
+        "AIRPT_NAME": "Binghamton, NY",
+        "TOT_ENP": 2734
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.97979736,
+          42.20869827
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "BGR",
+        "AIRPT_NAME": "Bangor, ME",
+        "TOT_ENP": 28237
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.828102,
+          44.8074
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "BHM",
+        "AIRPT_NAME": "Birmingham, AL",
+        "TOT_ENP": 80679
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.753502,
+          33.562901
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "BIL",
+        "AIRPT_NAME": "Billings, MT",
+        "TOT_ENP": 25315
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -108.542999,
+          45.807701
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "BIS",
+        "AIRPT_NAME": "Bismarck/Mandan, ND",
+        "TOT_ENP": 19578
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.74600219726562,
+          46.772701263427734
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "BJI",
+        "AIRPT_NAME": "Bemidji, MN",
+        "TOT_ENP": 3425
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.93370056,
+          47.50939941
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "BKG",
+        "AIRPT_NAME": "Branson, MO",
+        "TOT_ENP": 623
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.200544,
+          36.532082
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "BLI",
+        "AIRPT_NAME": "Bellingham, WA",
+        "TOT_ENP": 14182
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.53800201416016,
+          48.79280090332031
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "BLV",
+        "AIRPT_NAME": "Belleville, IL",
+        "TOT_ENP": 7007
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.835197,
+          38.5452
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "BMI",
+        "AIRPT_NAME": "Bloomington/Normal, IL",
+        "TOT_ENP": 12727
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.915901,
+          40.4771
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "BNA",
+        "AIRPT_NAME": "Nashville, TN",
+        "TOT_ENP": 397067
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.6782,
+          36.1245
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "BOI",
+        "AIRPT_NAME": "Boise, ID",
+        "TOT_ENP": 118075
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -116.223,
+          43.5644
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "BOS",
+        "AIRPT_NAME": "Boston, MA",
+        "TOT_ENP": 607634
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0079,
+          42.36197
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "BPT",
+        "AIRPT_NAME": "Beaumont/Port Arthur, TX",
+        "TOT_ENP": 3796
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.020699,
+          29.9508
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "BQK",
+        "AIRPT_NAME": "Brunswick, GA",
+        "TOT_ENP": 4246
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.466499,
+          31.258801
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "BRD",
+        "AIRPT_NAME": "Brainerd, MN",
+        "TOT_ENP": 3099
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.129727,
+          46.402861
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "BRO",
+        "AIRPT_NAME": "Brownsville, TX",
+        "TOT_ENP": 12557
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.4259033203125,
+          25.90679931640625
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "BRW",
+        "AIRPT_NAME": "Barrow, AK",
+        "TOT_ENP": 2218
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -156.766008,
+          71.285402
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "BTM",
+        "AIRPT_NAME": "Butte, MT",
+        "TOT_ENP": 3047
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.49700164794922,
+          45.95479965209961
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "BTR",
+        "AIRPT_NAME": "Baton Rouge, LA",
+        "TOT_ENP": 29446
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -91.149597,
+          30.533199
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "BTV",
+        "AIRPT_NAME": "Burlington, VT",
+        "TOT_ENP": 44885
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.153297,
+          44.471901
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "BUF",
+        "AIRPT_NAME": "Buffalo, NY",
+        "TOT_ENP": 109642
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.732201,
+          42.940498
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "BUR",
+        "AIRPT_NAME": "Burbank, CA",
+        "TOT_ENP": 126988
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.356378,
+          34.197703
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "BWI",
+        "AIRPT_NAME": "Baltimore, MD",
+        "TOT_ENP": 446749
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.668297,
+          39.1754
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "BZN",
+        "AIRPT_NAME": "Bozeman, MT",
+        "TOT_ENP": 49778
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.153,
+          45.7775
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "CAE",
+        "AIRPT_NAME": "Columbia, SC",
+        "TOT_ENP": 43073
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.119499,
+          33.938801
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "CAK",
+        "AIRPT_NAME": "Akron, OH",
+        "TOT_ENP": 22211
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.44219970703125,
+          40.91609954833984
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "CDB",
+        "AIRPT_NAME": "Cold Bay, AK",
+        "TOT_ENP": 248
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -162.725029,
+          55.207871
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "CDC",
+        "AIRPT_NAME": "Cedar City, UT",
+        "TOT_ENP": 2894
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.0989990234375,
+          37.70100021362305
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "CDV",
+        "AIRPT_NAME": "Cordova, AK",
+        "TOT_ENP": 3440
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -145.477997,
+          60.491798
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "CGI",
+        "AIRPT_NAME": "Cape Girardeau, MO",
+        "TOT_ENP": 2361
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.570801,
+          37.2253
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "CHA",
+        "AIRPT_NAME": "Chattanooga, TN",
+        "TOT_ENP": 36217
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -85.203796,
+          35.035301
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "CHO",
+        "AIRPT_NAME": "Charlottesville, VA",
+        "TOT_ENP": 30030
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.4529037475586,
+          38.13859939575195
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "CHS",
+        "AIRPT_NAME": "Charleston, SC",
+        "TOT_ENP": 123878
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.040497,
+          32.898602
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "CID",
+        "AIRPT_NAME": "Cedar Rapids/Iowa City, IA",
+        "TOT_ENP": 41635
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -91.7108,
+          41.884701
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "CIU",
+        "AIRPT_NAME": "Sault Ste. Marie, MI",
+        "TOT_ENP": 3334
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.471379,
+          46.247707
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "CKB",
+        "AIRPT_NAME": "Clarksburg/Fairmont, WV",
+        "TOT_ENP": 3730
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.228104,
+          39.2966
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "CLE",
+        "AIRPT_NAME": "Cleveland, OH",
+        "TOT_ENP": 200080
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.8498,
+          41.411701
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "CLL",
+        "AIRPT_NAME": "College Station/Bryan, TX",
+        "TOT_ENP": 7713
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.3638,
+          30.5886
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "CLT",
+        "AIRPT_NAME": "Charlotte, NC",
+        "TOT_ENP": 1082661
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.94309997558594,
+          35.2140007019043
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "CMH",
+        "AIRPT_NAME": "Columbus, OH",
+        "TOT_ENP": 192131
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.891899,
+          39.998001
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "CMI",
+        "AIRPT_NAME": "Champaign/Urbana, IL",
+        "TOT_ENP": 9681
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.276249,
+          40.039819
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "CMX",
+        "AIRPT_NAME": "Hancock/Houghton, MI",
+        "TOT_ENP": 3294
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.48909759521484,
+          47.168399810791016
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "CNY",
+        "AIRPT_NAME": "Moab, UT",
+        "TOT_ENP": 2922
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -109.754997,
+          38.755001
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "COD",
+        "AIRPT_NAME": "Cody, WY",
+        "TOT_ENP": 6010
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -109.024002,
+          44.520199
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "COS",
+        "AIRPT_NAME": "Colorado Springs, CO",
+        "TOT_ENP": 53976
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -104.700996,
+          38.805801
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "COU",
+        "AIRPT_NAME": "Columbia, MO",
+        "TOT_ENP": 10940
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -92.219597,
+          38.8181
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "CPR",
+        "AIRPT_NAME": "Casper, WY",
+        "TOT_ENP": 9792
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.463997,
+          42.908001
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "CRP",
+        "AIRPT_NAME": "Corpus Christi, TX",
+        "TOT_ENP": 24640
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.501198,
+          27.770399
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "CRW",
+        "AIRPT_NAME": "Charleston/Dunbar, WV",
+        "TOT_ENP": 18855
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.593201,
+          38.3731
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "CSG",
+        "AIRPT_NAME": "Columbus, GA",
+        "TOT_ENP": 5905
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.93890380859375,
+          32.516300201416016
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "CVG",
+        "AIRPT_NAME": "Cincinnati, OH",
+        "TOT_ENP": 201488
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.667801,
+          39.048801
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "CWA",
+        "AIRPT_NAME": "Mosinee, WI",
+        "TOT_ENP": 11827
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.670238,
+          44.777448
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "DAB",
+        "AIRPT_NAME": "Daytona Beach, FL",
+        "TOT_ENP": 14143
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.058098,
+          29.179899
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "DAL",
+        "AIRPT_NAME": "Dallas, TX",
+        "TOT_ENP": 315741
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.851799,
+          32.847099
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "DAY",
+        "AIRPT_NAME": "Dayton, OH",
+        "TOT_ENP": 56283
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.219398,
+          39.902401
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "DBQ",
+        "AIRPT_NAME": "Dubuque, IA",
+        "TOT_ENP": 2461
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -90.709503,
+          42.402
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "DCA",
+        "AIRPT_NAME": "Washington, DC",
+        "TOT_ENP": 576567
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.037697,
+          38.8521
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "DDC",
+        "AIRPT_NAME": "Dodge City, KS",
+        "TOT_ENP": 2025
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.9655990600586,
+          37.76340103149414
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "DEC",
+        "AIRPT_NAME": "Decatur, IL",
+        "TOT_ENP": 2762
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.8656997680664,
+          39.834598541259766
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "DEN",
+        "AIRPT_NAME": "Denver, CO",
+        "TOT_ENP": 1322736
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -104.672996521,
+          39.861698150635
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "DFW",
+        "AIRPT_NAME": "Dallas/Fort Worth, TX",
+        "TOT_ENP": 1369635
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.038002,
+          32.896801
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "DHN",
+        "AIRPT_NAME": "Dothan, AL",
+        "TOT_ENP": 4618
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -85.44960021972656,
+          31.321300506591797
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "DIK",
+        "AIRPT_NAME": "Dickinson, ND",
+        "TOT_ENP": 2796
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -102.801905,
+          46.797533
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "DLG",
+        "AIRPT_NAME": "Dillingham, AK",
+        "TOT_ENP": 2290
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -158.5050049,
+          59.04470062
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "DLH",
+        "AIRPT_NAME": "Duluth, MN",
+        "TOT_ENP": 11885
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -92.193604,
+          46.842098
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "DRO",
+        "AIRPT_NAME": "Durango, CO",
+        "TOT_ENP": 18874
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -107.753998,
+          37.151501
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "DRT",
+        "AIRPT_NAME": "Del Rio, TX",
+        "TOT_ENP": 1762
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.927001953,
+          29.3742008209
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "DSM",
+        "AIRPT_NAME": "Des Moines, IA",
+        "TOT_ENP": 73927
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.663101,
+          41.534
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "DTW",
+        "AIRPT_NAME": "Detroit, MI",
+        "TOT_ENP": 663938
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.353786,
+          42.21377
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "DVL",
+        "AIRPT_NAME": "Devils Lake, ND",
+        "TOT_ENP": 2961
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -98.908796,
+          48.115454
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "EAR",
+        "AIRPT_NAME": "Kearney, NE",
+        "TOT_ENP": 1882
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.006798,
+          40.727001
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "EAT",
+        "AIRPT_NAME": "Wenatchee, WA",
+        "TOT_ENP": 3976
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.207001,
+          47.398899
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "EAU",
+        "AIRPT_NAME": "Eau Claire, WI",
+        "TOT_ENP": 2260
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -91.48429870605467,
+          44.86579895019531
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "ECP",
+        "AIRPT_NAME": "Panama City, FL",
+        "TOT_ENP": 44527
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -85.795414,
+          30.357106
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "EGE",
+        "AIRPT_NAME": "Eagle, CO",
+        "TOT_ENP": 7615
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.9179993,
+          39.64260101
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "EKO",
+        "AIRPT_NAME": "Elko, NV",
+        "TOT_ENP": 2329
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -115.79199981689452,
+          40.82490158081055
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "ELM",
+        "AIRPT_NAME": "Elmira/Corning, NY",
+        "TOT_ENP": 7095
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.8916015625,
+          42.1599006652832
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "ELP",
+        "AIRPT_NAME": "El Paso, TX",
+        "TOT_ENP": 81349
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.377998,
+          31.807199
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "ERI",
+        "AIRPT_NAME": "Erie, PA",
+        "TOT_ENP": 7556
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.173867,
+          42.083127
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "ESC",
+        "AIRPT_NAME": "Escanaba, MI",
+        "TOT_ENP": 3057
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.088623,
+          45.723199
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "EUG",
+        "AIRPT_NAME": "Eugene, OR",
+        "TOT_ENP": 40213
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.21199798583984,
+          44.12459945678711
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "EVV",
+        "AIRPT_NAME": "Evansville, IN",
+        "TOT_ENP": 19132
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.5324020386,
+          38.0369987488
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "EWN",
+        "AIRPT_NAME": "New Bern/Morehead/Beaufort, NC",
+        "TOT_ENP": 9058
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.04290008539999,
+          35.0730018616
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "EWR",
+        "AIRPT_NAME": "Newark, NJ",
+        "TOT_ENP": 619343
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.168701,
+          40.692501
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "EYW",
+        "AIRPT_NAME": "Key West, FL",
+        "TOT_ENP": 29467
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.759598,
+          24.556101
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "FAI",
+        "AIRPT_NAME": "Fairbanks, AK",
+        "TOT_ENP": 25374
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -147.856003,
+          64.815102
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "FAR",
+        "AIRPT_NAME": "Fargo, ND",
+        "TOT_ENP": 29985
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.81580352783205,
+          46.92070007324219
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "FAT",
+        "AIRPT_NAME": "Fresno, CA",
+        "TOT_ENP": 54851
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.718002,
+          36.776199
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "FAY",
+        "AIRPT_NAME": "Fayetteville, NC",
+        "TOT_ENP": 16717
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.880302,
+          34.991199
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "FCA",
+        "AIRPT_NAME": "Kalispell, MT",
+        "TOT_ENP": 29452
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.25599670410156,
+          48.31050109863281
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "FLG",
+        "AIRPT_NAME": "Flagstaff, AZ",
+        "TOT_ENP": 9466
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.670998,
+          35.1385
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "FLL",
+        "AIRPT_NAME": "Fort Lauderdale, FL",
+        "TOT_ENP": 387401
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.152702,
+          26.072599
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "FLO",
+        "AIRPT_NAME": "Florence, SC",
+        "TOT_ENP": 4382
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.7238998413086,
+          34.18539810180664
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "FNT",
+        "AIRPT_NAME": "Flint, MI",
+        "TOT_ENP": 16263
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.74359893798828,
+          42.96540069580078
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "FSD",
+        "AIRPT_NAME": "Sioux Falls, SD",
+        "TOT_ENP": 36585
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.741152,
+          43.585463
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "FSM",
+        "AIRPT_NAME": "Fort Smith, AR",
+        "TOT_ENP": 6868
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.367401,
+          35.336601
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "FWA",
+        "AIRPT_NAME": "Fort Wayne, IN",
+        "TOT_ENP": 30210
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -85.195099,
+          40.9785
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "GCC",
+        "AIRPT_NAME": "Gillette, WY",
+        "TOT_ENP": 3354
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -105.539001,
+          44.3489
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "GCK",
+        "AIRPT_NAME": "Garden City, KS",
+        "TOT_ENP": 3324
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.723999023,
+          37.9275016785
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "GEG",
+        "AIRPT_NAME": "Spokane, WA",
+        "TOT_ENP": 99020
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.533997,
+          47.6199
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "GFK",
+        "AIRPT_NAME": "Grand Forks, ND",
+        "TOT_ENP": 6741
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.176102,
+          47.949299
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "GGG",
+        "AIRPT_NAME": "Longview, TX",
+        "TOT_ENP": 3797
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.71150207519533,
+          32.38399887084961
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "GJT",
+        "AIRPT_NAME": "Grand Junction, CO",
+        "TOT_ENP": 19746
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -108.529387,
+          39.126663
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "GNV",
+        "AIRPT_NAME": "Gainesville, FL",
+        "TOT_ENP": 18821
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.2717971802,
+          29.6900997162
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "GPT",
+        "AIRPT_NAME": "Gulfport/Biloxi, MS",
+        "TOT_ENP": 19371
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.070099,
+          30.407301
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "GRB",
+        "AIRPT_NAME": "Green Bay, WI",
+        "TOT_ENP": 24586
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.130805,
+          44.483459
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "GRI",
+        "AIRPT_NAME": "Grand Island, NE",
+        "TOT_ENP": 4512
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -98.30960083007812,
+          40.967498779296875
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "GRK",
+        "AIRPT_NAME": "Killeen, TX",
+        "TOT_ENP": 11814
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.828903,
+          31.0672
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "GRR",
+        "AIRPT_NAME": "Grand Rapids, MI",
+        "TOT_ENP": 85044
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -85.52279663,
+          42.88079834
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "GSO",
+        "AIRPT_NAME": "Greensboro/High Point, NC",
+        "TOT_ENP": 63181
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.937302,
+          36.097801
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "GSP",
+        "AIRPT_NAME": "Greer, SC",
+        "TOT_ENP": 70141
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.218903,
+          34.895699
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "GST",
+        "AIRPT_NAME": "Gustavus, AK",
+        "TOT_ENP": 1212
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -135.7070007,
+          58.4253006
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "GTF",
+        "AIRPT_NAME": "Great Falls, MT",
+        "TOT_ENP": 13733
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.3710022,
+          47.48199844
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "GTR",
+        "AIRPT_NAME": "Columbus, MS",
+        "TOT_ENP": 4290
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.5914,
+          33.450298
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "GUC",
+        "AIRPT_NAME": "Gunnison, CO",
+        "TOT_ENP": 3686
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.934566,
+          38.534672
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "GUM",
+        "AIRPT_NAME": "Guam, TT",
+        "TOT_ENP": 3668
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.796005,
+          13.4834
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "HDN",
+        "AIRPT_NAME": "Hayden, CO",
+        "TOT_ENP": 5469
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -107.218002,
+          40.481201
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "HGR",
+        "AIRPT_NAME": "Hagerstown, MD",
+        "TOT_ENP": 1323
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.728014,
+          39.708771
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "HHH",
+        "AIRPT_NAME": "Hilton Head, SC",
+        "TOT_ENP": 14325
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.697502,
+          32.2244
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "HIB",
+        "AIRPT_NAME": "Hibbing, MN",
+        "TOT_ENP": 2889
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -92.836905,
+          47.384831
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "HLN",
+        "AIRPT_NAME": "Helena, MT",
+        "TOT_ENP": 9023
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.983002,
+          46.6068
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "HNL",
+        "AIRPT_NAME": "Honolulu, HI",
+        "TOT_ENP": 246395
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -157.924228,
+          21.32062
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "HOB",
+        "AIRPT_NAME": "Hobbs, NM",
+        "TOT_ENP": 2479
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.217003,
+          32.6875
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "HOU",
+        "AIRPT_NAME": "Houston, TX",
+        "TOT_ENP": 251544
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -95.2789,
+          29.645399
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "HRL",
+        "AIRPT_NAME": "Harlingen/San Benito, TX",
+        "TOT_ENP": 20209
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.65440368652344,
+          26.228500366210938
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "HSV",
+        "AIRPT_NAME": "Huntsville, AL",
+        "TOT_ENP": 46821
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.775101,
+          34.637199
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "HTS",
+        "AIRPT_NAME": "Ashland, WV",
+        "TOT_ENP": 7610
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.557999,
+          38.366699
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "HVN",
+        "AIRPT_NAME": "New Haven, CT",
+        "TOT_ENP": 1903
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.88680267,
+          41.26369858
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "HYA",
+        "AIRPT_NAME": "Hyannis, MA",
+        "TOT_ENP": 1630
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.280403,
+          41.6693
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "HYS",
+        "AIRPT_NAME": "Hays, KS",
+        "TOT_ENP": 4105
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.273148,
+          38.844521
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "IAD",
+        "AIRPT_NAME": "Washington, DC",
+        "TOT_ENP": 371997
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.455803,
+          38.9445
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "IAG",
+        "AIRPT_NAME": "Niagara Falls, NY",
+        "TOT_ENP": 2275
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.946198,
+          43.1073
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "IAH",
+        "AIRPT_NAME": "Houston, TX",
+        "TOT_ENP": 725381
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -95.34140014648438,
+          29.984399795532227
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "ICT",
+        "AIRPT_NAME": "Wichita, KS",
+        "TOT_ENP": 50335
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.433098,
+          37.649899
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "IDA",
+        "AIRPT_NAME": "Idaho Falls, ID",
+        "TOT_ENP": 18280
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.070999,
+          43.514599
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "ILM",
+        "AIRPT_NAME": "Wilmington, NC",
+        "TOT_ENP": 42319
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.90260314941406,
+          34.270599365234375
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "IMT",
+        "AIRPT_NAME": "Iron Mountain/Kingsfd, MI",
+        "TOT_ENP": 3288
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.114557,
+          45.81911
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "IND",
+        "AIRPT_NAME": "Indianapolis, IN",
+        "TOT_ENP": 208506
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.294403,
+          39.7173
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "INL",
+        "AIRPT_NAME": "International Falls, MN",
+        "TOT_ENP": 3066
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.4030990600586,
+          48.566200256347656
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "IPT",
+        "AIRPT_NAME": "Williamsport, PA",
+        "TOT_ENP": 1736
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.92245,
+          41.242126
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "ISP",
+        "AIRPT_NAME": "Islip, NY",
+        "TOT_ENP": 23601
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.10019684,
+          40.79520035
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "ITH",
+        "AIRPT_NAME": "Ithaca/Cortland, NY",
+        "TOT_ENP": 8989
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.4583969116211,
+          42.49100112915039
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "ITO",
+        "AIRPT_NAME": "Hilo, HI",
+        "TOT_ENP": 27667
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -155.048004,
+          19.721399
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "JAC",
+        "AIRPT_NAME": "Jackson, WY",
+        "TOT_ENP": 27490
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.73799896240234,
+          43.6072998046875
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "JAN",
+        "AIRPT_NAME": "Jackson/Vicksburg, MS",
+        "TOT_ENP": 38589
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -90.075897,
+          32.311199
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "JAX",
+        "AIRPT_NAME": "Jacksonville, FL",
+        "TOT_ENP": 136586
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.687813,
+          30.492469
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "JFK",
+        "AIRPT_NAME": "New York, NY",
+        "TOT_ENP": 530981
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.779317,
+          40.639447
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "JLN",
+        "AIRPT_NAME": "Joplin, MO",
+        "TOT_ENP": 3968
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.498299,
+          37.151798
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "JMS",
+        "AIRPT_NAME": "Jamestown, ND",
+        "TOT_ENP": 3782
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -98.67819977,
+          46.92969894
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "JNU",
+        "AIRPT_NAME": "Juneau, AK",
+        "TOT_ENP": 24414
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -134.576004,
+          58.355
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "KOA",
+        "AIRPT_NAME": "Kona, HI",
+        "TOT_ENP": 69568
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -156.045603,
+          19.738783
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "KTN",
+        "AIRPT_NAME": "Ketchikan, AK",
+        "TOT_ENP": 12740
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -131.7140045,
+          55.35559845
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "LAN",
+        "AIRPT_NAME": "Lansing, MI",
+        "TOT_ENP": 12442
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.58740234375,
+          42.77870178222656
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "LAR",
+        "AIRPT_NAME": "Laramie, WY",
+        "TOT_ENP": 2879
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -105.6750030517578,
+          41.31209945678711
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "LAS",
+        "AIRPT_NAME": "Las Vegas, NV",
+        "TOT_ENP": 770722
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -115.151817,
+          36.083361
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "LAW",
+        "AIRPT_NAME": "Lawton/Fort Sill, OK",
+        "TOT_ENP": 5488
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -98.416603,
+          34.567699
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "LAX",
+        "AIRPT_NAME": "Los Angeles, CA",
+        "TOT_ENP": 948146
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.407997,
+          33.942501
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "LBB",
+        "AIRPT_NAME": "Lubbock, TX",
+        "TOT_ENP": 31025
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.822998,
+          33.663601
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "LBE",
+        "AIRPT_NAME": "Latrobe, PA",
+        "TOT_ENP": 4559
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.4048,
+          40.275902
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "LBF",
+        "AIRPT_NAME": "North Platte, NE",
+        "TOT_ENP": 3128
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.6839981,
+          41.12620163
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "LBL",
+        "AIRPT_NAME": "Liberal, KS",
+        "TOT_ENP": 2868
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.9599991,
+          37.0442009
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "LCH",
+        "AIRPT_NAME": "Lake Charles, LA",
+        "TOT_ENP": 8670
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.22329711914062,
+          30.126100540161133
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "LCK",
+        "AIRPT_NAME": "Columbus, OH",
+        "TOT_ENP": 6894
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.927803,
+          39.813801
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "LEX",
+        "AIRPT_NAME": "Lexington, KY",
+        "TOT_ENP": 47691
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.605904,
+          38.036499
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "LFT",
+        "AIRPT_NAME": "Lafayette, LA",
+        "TOT_ENP": 22034
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -91.987602,
+          30.205299
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "LGA",
+        "AIRPT_NAME": "New York, NY",
+        "TOT_ENP": 657852
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.872597,
+          40.777199
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "LGB",
+        "AIRPT_NAME": "Long Beach, CA",
+        "TOT_ENP": 68202
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.149891,
+          33.816523
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "LIH",
+        "AIRPT_NAME": "Lihue, HI",
+        "TOT_ENP": 63288
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -159.339005,
+          21.976
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "LIT",
+        "AIRPT_NAME": "Little Rock, AR",
+        "TOT_ENP": 62674
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -92.223728,
+          34.729582
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "LNK",
+        "AIRPT_NAME": "Lincoln, NE",
+        "TOT_ENP": 12379
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.75920104980467,
+          40.85100173950195
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "LNY",
+        "AIRPT_NAME": "Lanai, HI",
+        "TOT_ENP": 3191
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -156.951324,
+          20.785675
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "LRD",
+        "AIRPT_NAME": "Laredo, TX",
+        "TOT_ENP": 11497
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.46160125732422,
+          27.543800354003903
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "LSE",
+        "AIRPT_NAME": "La Crosse, WI",
+        "TOT_ENP": 7828
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -91.256699,
+          43.879002
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "LWB",
+        "AIRPT_NAME": "Lewisburg, WV",
+        "TOT_ENP": 2482
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.400438,
+          37.857914
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "LWS",
+        "AIRPT_NAME": "Lewiston, ID",
+        "TOT_ENP": 4923
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.01499938964844,
+          46.3745002746582
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "LYH",
+        "AIRPT_NAME": "Lynchburg, VA",
+        "TOT_ENP": 8415
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.200401,
+          37.326698
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "MAF",
+        "AIRPT_NAME": "Midland/Odessa, TX",
+        "TOT_ENP": 42458
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -102.202003,
+          31.942499
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "MBS",
+        "AIRPT_NAME": "Saginaw/Bay City/Midland, MI",
+        "TOT_ENP": 10143
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.082275,
+          43.531913
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "MCI",
+        "AIRPT_NAME": "Kansas City, MO",
+        "TOT_ENP": 228199
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.713898,
+          39.2976
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "MCO",
+        "AIRPT_NAME": "Orlando, FL",
+        "TOT_ENP": 639469
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.30899810791016,
+          28.429399490356445
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "MDT",
+        "AIRPT_NAME": "Harrisburg, PA",
+        "TOT_ENP": 43732
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.763397,
+          40.193501
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "MDW",
+        "AIRPT_NAME": "Chicago, IL",
+        "TOT_ENP": 387662
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.752403,
+          41.785999
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "MEI",
+        "AIRPT_NAME": "Meridian, MS",
+        "TOT_ENP": 3683
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.7519,
+          32.3326
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "MEM",
+        "AIRPT_NAME": "Memphis, TN",
+        "TOT_ENP": 108823
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.9767,
+          35.0424
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "MFE",
+        "AIRPT_NAME": "Mission/McAllen/Edinburg, TX",
+        "TOT_ENP": 23685
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -98.237965,
+          26.176141
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "MFR",
+        "AIRPT_NAME": "Medford, OR",
+        "TOT_ENP": 36477
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.8730010986328,
+          42.37419891357422
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "MGM",
+        "AIRPT_NAME": "Montgomery, AL",
+        "TOT_ENP": 17095
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.393997,
+          32.300598
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "MHK",
+        "AIRPT_NAME": "Manhattan/Ft. Riley, KS",
+        "TOT_ENP": 6649
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.6707992553711,
+          39.14099884033203
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "MHT",
+        "AIRPT_NAME": "Manchester, NH",
+        "TOT_ENP": 40035
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.435699,
+          42.932598
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "MIA",
+        "AIRPT_NAME": "Miami, FL",
+        "TOT_ENP": 418123
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.29060363769531,
+          25.79319953918457
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "MKE",
+        "AIRPT_NAME": "Milwaukee, WI",
+        "TOT_ENP": 136312
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.896599,
+          42.947201
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "MKG",
+        "AIRPT_NAME": "Muskegon, MI",
+        "TOT_ENP": 2432
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.238197,
+          43.169498
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "MKK",
+        "AIRPT_NAME": "Hoolehua, HI",
+        "TOT_ENP": 2244
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -157.095993,
+          21.152901
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "MLB",
+        "AIRPT_NAME": "Melbourne, FL",
+        "TOT_ENP": 11157
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.645302,
+          28.1028
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "MLI",
+        "AIRPT_NAME": "Moline, IL",
+        "TOT_ENP": 23743
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -90.5075,
+          41.448502
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "MLU",
+        "AIRPT_NAME": "Monroe, LA",
+        "TOT_ENP": 11105
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -92.037697,
+          32.510899
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "MOB",
+        "AIRPT_NAME": "Mobile, AL",
+        "TOT_ENP": 25477
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.242798,
+          30.6912
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "MOT",
+        "AIRPT_NAME": "Minot, ND",
+        "TOT_ENP": 11806
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.27999877929688,
+          48.2593994140625
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "MQT",
+        "AIRPT_NAME": "Marquette, MI",
+        "TOT_ENP": 6000
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.395401,
+          46.3536
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "MRY",
+        "AIRPT_NAME": "Monterey, CA",
+        "TOT_ENP": 19334
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.84300231933594,
+          36.58700180053711
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "MSN",
+        "AIRPT_NAME": "Madison, WI",
+        "TOT_ENP": 59271
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.337502,
+          43.1399
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "MSO",
+        "AIRPT_NAME": "Missoula, MT",
+        "TOT_ENP": 31082
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0910034,
+          46.91630173
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "MSP",
+        "AIRPT_NAME": "Minneapolis, MN",
+        "TOT_ENP": 634432
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.221741,
+          44.880081
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "MSY",
+        "AIRPT_NAME": "New Orleans, LA",
+        "TOT_ENP": 219119
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -90.258003,
+          29.993401
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "MTJ",
+        "AIRPT_NAME": "Montrose/Delta, CO",
+        "TOT_ENP": 11742
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -107.893997,
+          38.5098
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "MVY",
+        "AIRPT_NAME": "Martha's Vineyard, MA",
+        "TOT_ENP": 9462
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6143035889,
+          41.3931007385
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "MYR",
+        "AIRPT_NAME": "Myrtle Beach, SC",
+        "TOT_ENP": 90355
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.928299,
+          33.679699
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "OAJ",
+        "AIRPT_NAME": "Jacksonville/Camp Lejeune, NC",
+        "TOT_ENP": 13765
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.612099,
+          34.829201
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "OAK",
+        "AIRPT_NAME": "Oakland, CA",
+        "TOT_ENP": 215169
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.221184,
+          37.720085
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "OGD",
+        "AIRPT_NAME": "Ogden, UT",
+        "TOT_ENP": 284
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.0120010376,
+          41.195899963379
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "OGG",
+        "AIRPT_NAME": "Kahului, HI",
+        "TOT_ENP": 120286
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -156.431837,
+          20.896263
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "OGS",
+        "AIRPT_NAME": "Ogdensburg, NY",
+        "TOT_ENP": 1512
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.4655,
+          44.6819
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "OKC",
+        "AIRPT_NAME": "Oklahoma City, OK",
+        "TOT_ENP": 106889
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.598248,
+          35.393388
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "OMA",
+        "AIRPT_NAME": "Omaha, NE",
+        "TOT_ENP": 111167
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -95.894096,
+          41.3032
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "OME",
+        "AIRPT_NAME": "Nome, AK",
+        "TOT_ENP": 3080
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -165.44500732421875,
+          64.51219940185547
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "ONT",
+        "AIRPT_NAME": "Ontario, CA",
+        "TOT_ENP": 106569
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.600998,
+          34.056
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "ORD",
+        "AIRPT_NAME": "Chicago, IL",
+        "TOT_ENP": 1521120
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.9048,
+          41.9786
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "ORF",
+        "AIRPT_NAME": "Norfolk, VA",
+        "TOT_ENP": 108152
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.201,
+          36.895341
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "ORH",
+        "AIRPT_NAME": "Worcester, MA",
+        "TOT_ENP": 5354
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.875702,
+          42.2673
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "OTH",
+        "AIRPT_NAME": "North Bend/Coos Bay, OR",
+        "TOT_ENP": 2058
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -124.24600219726562,
+          43.41709899902344
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "OTZ",
+        "AIRPT_NAME": "Kotzebue, AK",
+        "TOT_ENP": 3082
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -162.598999,
+          66.88469696
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "OWB",
+        "AIRPT_NAME": "Owensboro, KY",
+        "TOT_ENP": 378
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.16680145,
+          37.74010086
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "PAE",
+        "AIRPT_NAME": "Everett, WA",
+        "TOT_ENP": 15467
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.281998,
+          47.9063
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "PAH",
+        "AIRPT_NAME": "Paducah, KY",
+        "TOT_ENP": 2910
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.7738037109375,
+          37.06079864501953
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "PBG",
+        "AIRPT_NAME": "Plattsburgh, NY",
+        "TOT_ENP": 3224
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.46810150146484,
+          44.650901794433594
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "PBI",
+        "AIRPT_NAME": "West Palm Beach/Palm Beach, FL",
+        "TOT_ENP": 94797
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.095596,
+          26.683201
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "PDX",
+        "AIRPT_NAME": "Portland, OR",
+        "TOT_ENP": 334767
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.598,
+          45.588699
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "PGD",
+        "AIRPT_NAME": "Punta Gorda, FL",
+        "TOT_ENP": 24229
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.990501,
+          26.9202
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "PGV",
+        "AIRPT_NAME": "Greenville, NC",
+        "TOT_ENP": 4987
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.384262,
+          35.635535
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "PHF",
+        "AIRPT_NAME": "Newport News/Williamsburg, VA",
+        "TOT_ENP": 11738
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.492996,
+          37.131901
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "PHL",
+        "AIRPT_NAME": "Philadelphia, PA",
+        "TOT_ENP": 590235
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.241096,
+          39.871899
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "PHX",
+        "AIRPT_NAME": "Phoenix, AZ",
+        "TOT_ENP": 756785
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.005905,
+          33.435302
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "PIA",
+        "AIRPT_NAME": "Peoria, IL",
+        "TOT_ENP": 22021
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.693298,
+          40.6642
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "PIB",
+        "AIRPT_NAME": "Hattiesburg/Laurel, MS",
+        "TOT_ENP": 3076
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.337097,
+          31.4671
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "PIE",
+        "AIRPT_NAME": "St. Petersburg, FL",
+        "TOT_ENP": 39798
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.687401,
+          27.9102
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "PIH",
+        "AIRPT_NAME": "Pocatello, ID",
+        "TOT_ENP": 3700
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.59600067138672,
+          42.9098014831543
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "PIR",
+        "AIRPT_NAME": "Pierre, SD",
+        "TOT_ENP": 1461
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.2860031,
+          44.38270187
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "PIT",
+        "AIRPT_NAME": "Pittsburgh, PA",
+        "TOT_ENP": 199435
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.232903,
+          40.491501
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "PLN",
+        "AIRPT_NAME": "Pellston, MI",
+        "TOT_ENP": 5287
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.79669952,
+          45.57089996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "PNS",
+        "AIRPT_NAME": "Pensacola, FL",
+        "TOT_ENP": 65239
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.1866,
+          30.4734
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "PQI",
+        "AIRPT_NAME": "Presque Isle/Houlton, ME",
+        "TOT_ENP": 2581
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.0448,
+          46.688999
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "PRC",
+        "AIRPT_NAME": "Prescott, AZ",
+        "TOT_ENP": 2992
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.419998,
+          34.654499
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "PSC",
+        "AIRPT_NAME": "Pasco/Kennewick/Richland, WA",
+        "TOT_ENP": 28752
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.119003,
+          46.264702
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "PSG",
+        "AIRPT_NAME": "Petersburg, AK",
+        "TOT_ENP": 3440
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -132.9450073,
+          56.80170059
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "PSM",
+        "AIRPT_NAME": "Portsmouth, NH",
+        "TOT_ENP": 1732
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.8233032227,
+          43.0778999329
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "PSP",
+        "AIRPT_NAME": "Palm Springs, CA",
+        "TOT_ENP": 40810
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -116.507004,
+          33.8297
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "PUB",
+        "AIRPT_NAME": "Pueblo, CO",
+        "TOT_ENP": 2618
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -104.497002,
+          38.289101
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "PUW",
+        "AIRPT_NAME": "Pullman, WA",
+        "TOT_ENP": 4805
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.11163,
+          46.741601
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "PVD",
+        "AIRPT_NAME": "Providence, RI",
+        "TOT_ENP": 76346
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.425668,
+          41.725038
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "PVU",
+        "AIRPT_NAME": "Provo, UT",
+        "TOT_ENP": 5410
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.723,
+          40.2192
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "PWM",
+        "AIRPT_NAME": "Portland, ME",
+        "TOT_ENP": 65820
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.309303,
+          43.646198
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "RAP",
+        "AIRPT_NAME": "Rapid City, SD",
+        "TOT_ENP": 30187
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.05699920654295,
+          44.0452995300293
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "RDD",
+        "AIRPT_NAME": "Redding, CA",
+        "TOT_ENP": 6435
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2929993,
+          40.50899887
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "RDM",
+        "AIRPT_NAME": "Bend/Redmond, OR",
+        "TOT_ENP": 37980
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.150002,
+          44.254101
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "RDU",
+        "AIRPT_NAME": "Raleigh/Durham, NC",
+        "TOT_ENP": 268836
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.787498,
+          35.877602
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "RFD",
+        "AIRPT_NAME": "Rockford, IL",
+        "TOT_ENP": 3307
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.097198,
+          42.1954
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "RHI",
+        "AIRPT_NAME": "Rhinelander, WI",
+        "TOT_ENP": 4005
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.46749877929688,
+          45.63119888305664
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "RIC",
+        "AIRPT_NAME": "Richmond, VA",
+        "TOT_ENP": 110114
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.319702,
+          37.505199
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "RIW",
+        "AIRPT_NAME": "Riverton/Lander, WY",
+        "TOT_ENP": 1665
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -108.459999,
+          43.064201
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "RKS",
+        "AIRPT_NAME": "Rock Springs, WY",
+        "TOT_ENP": 2776
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -109.065001,
+          41.5942
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "RNO",
+        "AIRPT_NAME": "Reno, NV",
+        "TOT_ENP": 99437
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.767998,
+          39.4991
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "ROA",
+        "AIRPT_NAME": "Roanoke, VA",
+        "TOT_ENP": 29552
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.975403,
+          37.3255
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "ROC",
+        "AIRPT_NAME": "Rochester, NY",
+        "TOT_ENP": 71629
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.672401,
+          43.1189
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "ROW",
+        "AIRPT_NAME": "Roswell, NM",
+        "TOT_ENP": 5199
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -104.530998,
+          33.301601
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "RST",
+        "AIRPT_NAME": "Rochester, MN",
+        "TOT_ENP": 13122
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -92.5,
+          43.908298
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "RSW",
+        "AIRPT_NAME": "Fort Myers, FL",
+        "TOT_ENP": 122954
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.75520324707031,
+          26.53619956970215
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "SAF",
+        "AIRPT_NAME": "Santa Fe, NM",
+        "TOT_ENP": 12169
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.088997,
+          35.6171
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "SAN",
+        "AIRPT_NAME": "San Diego, CA",
+        "TOT_ENP": 408931
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.190002441,
+          32.7336006165
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "SAT",
+        "AIRPT_NAME": "San Antonio, TX",
+        "TOT_ENP": 171572
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -98.469803,
+          29.533701
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "SAV",
+        "AIRPT_NAME": "Savannah, GA",
+        "TOT_ENP": 90755
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.202103,
+          32.127602
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "SBA",
+        "AIRPT_NAME": "Santa Barbara, CA",
+        "TOT_ENP": 34170
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.839996,
+          34.426201
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "SBN",
+        "AIRPT_NAME": "South Bend, IN",
+        "TOT_ENP": 28741
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.317299,
+          41.708698
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "SBP",
+        "AIRPT_NAME": "San Luis Obispo, CA",
+        "TOT_ENP": 22503
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.641998291,
+          35.236801147499996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "SBY",
+        "AIRPT_NAME": "Salisbury, MD",
+        "TOT_ENP": 7648
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.51029968261719,
+          38.34049987792969
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "SCC",
+        "AIRPT_NAME": "Deadhorse, AK",
+        "TOT_ENP": 2898
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -148.4649963,
+          70.19470215
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "SCE",
+        "AIRPT_NAME": "State College, PA",
+        "TOT_ENP": 16019
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.84852,
+          40.849374
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "SCK",
+        "AIRPT_NAME": "Stockton, CA",
+        "TOT_ENP": 3104
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.238079,
+          37.893279
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "SDF",
+        "AIRPT_NAME": "Louisville, KY",
+        "TOT_ENP": 116478
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -85.736,
+          38.1744
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "SEA",
+        "AIRPT_NAME": "Seattle, WA",
+        "TOT_ENP": 873509
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.310276,
+          47.447943
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "SFB",
+        "AIRPT_NAME": "Sanford, FL",
+        "TOT_ENP": 48265
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.23750305175781,
+          28.777599334716797
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "SFO",
+        "AIRPT_NAME": "San Francisco, CA",
+        "TOT_ENP": 646316
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.374821,
+          37.619806
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "SGF",
+        "AIRPT_NAME": "Springfield, MO",
+        "TOT_ENP": 45863
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.388603,
+          37.245701
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "SGU",
+        "AIRPT_NAME": "St. George, UT",
+        "TOT_ENP": 12014
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.510306,
+          37.036389
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "SHD",
+        "AIRPT_NAME": "Staunton, VA",
+        "TOT_ENP": 2427
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.8964,
+          38.263802
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "SHR",
+        "AIRPT_NAME": "Sheridan, WY",
+        "TOT_ENP": 2212
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.9800033569336,
+          44.76919937133789
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "SHV",
+        "AIRPT_NAME": "Shreveport, LA",
+        "TOT_ENP": 27917
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.8256,
+          32.446602
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "SIT",
+        "AIRPT_NAME": "Sitka, AK",
+        "TOT_ENP": 8272
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -135.36199951171875,
+          57.04710006713867
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "SJC",
+        "AIRPT_NAME": "San Jose, CA",
+        "TOT_ENP": 250385
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.929188,
+          37.362452
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "SJT",
+        "AIRPT_NAME": "San Angelo, TX",
+        "TOT_ENP": 7296
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.49600219726562,
+          31.35770034790039
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "SJU",
+        "AIRPT_NAME": "San Juan, PR",
+        "TOT_ENP": 142816
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.001801,
+          18.4394
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "SLC",
+        "AIRPT_NAME": "Salt Lake City, UT",
+        "TOT_ENP": 533037
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.979866,
+          40.78886
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "SLN",
+        "AIRPT_NAME": "Salina, KS",
+        "TOT_ENP": 3659
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.6521987915039,
+          38.79100036621094
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "SMF",
+        "AIRPT_NAME": "Sacramento, CA",
+        "TOT_ENP": 243649
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.591003,
+          38.6954
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "SMX",
+        "AIRPT_NAME": "Santa Maria, CA",
+        "TOT_ENP": 849
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.457001,
+          34.898899
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "SNA",
+        "AIRPT_NAME": "Santa Ana, CA",
+        "TOT_ENP": 194944
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.867996,
+          33.675701
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "SPI",
+        "AIRPT_NAME": "Springfield, IL",
+        "TOT_ENP": 6044
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.677902,
+          39.844101
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "SPN",
+        "AIRPT_NAME": "Saipan, TT",
+        "TOT_ENP": 1924
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.729004,
+          15.119
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "SPS",
+        "AIRPT_NAME": "Wichita Falls, TX",
+        "TOT_ENP": 4664
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -98.491898,
+          33.9888
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "SRQ",
+        "AIRPT_NAME": "Sarasota/Bradenton, FL",
+        "TOT_ENP": 50742
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.554359,
+          27.394631
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "STC",
+        "AIRPT_NAME": "St. Cloud, MN",
+        "TOT_ENP": 304
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.059898,
+          45.5466
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "STL",
+        "AIRPT_NAME": "St. Louis, MO",
+        "TOT_ENP": 305932
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -90.370003,
+          38.748697
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "STS",
+        "AIRPT_NAME": "Santa Rosa, CA",
+        "TOT_ENP": 18955
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.8130035,
+          38.50899887
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "STT",
+        "AIRPT_NAME": "Charlotte Amalie, VI",
+        "TOT_ENP": 22531
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.977251,
+          18.337091
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "STX",
+        "AIRPT_NAME": "Christiansted, VI",
+        "TOT_ENP": 5184
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.802608,
+          17.701413
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "SUN",
+        "AIRPT_NAME": "Sun Valley/Hailey/Ketchum, ID",
+        "TOT_ENP": 8971
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.2959976,
+          43.50439835
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "SUX",
+        "AIRPT_NAME": "Sioux City, IA",
+        "TOT_ENP": 4112
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.382237,
+          42.397605
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "SWF",
+        "AIRPT_NAME": "Newburgh/Poughkeepsie, NY",
+        "TOT_ENP": 6431
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.104797,
+          41.504101
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "SWO",
+        "AIRPT_NAME": "Stillwater, OK",
+        "TOT_ENP": 3436
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.085581,
+          36.162132
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "SYR",
+        "AIRPT_NAME": "Syracuse, NY",
+        "TOT_ENP": 69105
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.1063003540039,
+          43.11119842529297
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "TLH",
+        "AIRPT_NAME": "Tallahassee, FL",
+        "TOT_ENP": 26750
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.350304,
+          30.3965
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "TOL",
+        "AIRPT_NAME": "Toledo, OH",
+        "TOT_ENP": 5700
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.8078,
+          41.5868
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "TPA",
+        "AIRPT_NAME": "Tampa, FL",
+        "TOT_ENP": 316489
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.533203,
+          27.9755
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "TRI",
+        "AIRPT_NAME": "Bristol/Johnson City/Kingsport, TN",
+        "TOT_ENP": 18696
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.407401,
+          36.475201
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "TTN",
+        "AIRPT_NAME": "Trenton, NJ",
+        "TOT_ENP": 9949
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.813499,
+          40.276699
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "TUL",
+        "AIRPT_NAME": "Tulsa, OK",
+        "TOT_ENP": 79860
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -95.88809967041016,
+          36.19839859008789
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "TUS",
+        "AIRPT_NAME": "Tucson, AZ",
+        "TOT_ENP": 72890
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.938053,
+          32.115004
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "TVC",
+        "AIRPT_NAME": "Traverse City, MI",
+        "TOT_ENP": 32752
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -85.58219909667969,
+          44.74140167236328
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "TWF",
+        "AIRPT_NAME": "Twin Falls, ID",
+        "TOT_ENP": 3858
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.487999,
+          42.4818
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "TXK",
+        "AIRPT_NAME": "Texarkana, AR",
+        "TOT_ENP": 5144
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.990997,
+          33.453701
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "TYR",
+        "AIRPT_NAME": "Tyler, TX",
+        "TOT_ENP": 5573
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -95.40239715576172,
+          32.35409927368164
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "TYS",
+        "AIRPT_NAME": "Knoxville, TN",
+        "TOT_ENP": 83969
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.994003,
+          35.811001
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "USA",
+        "AIRPT_NAME": "Concord, NC",
+        "TOT_ENP": 5176
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.709099,
+          35.387798
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "VEL",
+        "AIRPT_NAME": "Vernal, UT",
+        "TOT_ENP": 2182
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -109.511661,
+          40.436214
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "VLD",
+        "AIRPT_NAME": "Valdosta, GA",
+        "TOT_ENP": 4333
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.27670288085938,
+          30.782499313354492
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "VPS",
+        "AIRPT_NAME": "Valparaiso, FL",
+        "TOT_ENP": 55101
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.525398,
+          30.4832
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "WRG",
+        "AIRPT_NAME": "Wrangell, AK",
+        "TOT_ENP": 3440
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -132.3699951,
+          56.48429871
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "WYS",
+        "AIRPT_NAME": "West Yellowstone, MT",
+        "TOT_ENP": 3214
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.117996,
+          44.6884
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "XNA",
+        "AIRPT_NAME": "Fayetteville, AR",
+        "TOT_ENP": 59857
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.306801,
+          36.281898
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "XWA",
+        "AIRPT_NAME": "Williston, ND",
+        "TOT_ENP": 4757
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.748797,
+          48.258387
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "YAK",
+        "AIRPT_NAME": "Yakutat, AK",
+        "TOT_ENP": 3440
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -139.660435,
+          59.508717
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "YKM",
+        "AIRPT_NAME": "Yakima, WA",
+        "TOT_ENP": 3699
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.5439987,
+          46.56819916
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "YUM",
+        "AIRPT_NAME": "Yuma, AZ",
+        "TOT_ENP": 7321
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.609375,
+          32.650938
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "BFM",
+        "AIRPT_NAME": "Mobile, AL",
+        "TOT_ENP": 184
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.06809997559999,
+          30.626800537100003
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "BQN",
+        "AIRPT_NAME": "Aguadilla, PR",
+        "TOT_ENP": 10374
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.129402,
+          18.4949
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "CYS",
+        "AIRPT_NAME": "Cheyenne, WY",
+        "TOT_ENP": 1420
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -104.811997,
+          41.155701
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "DUT",
+        "AIRPT_NAME": "Unalaska, AK",
+        "TOT_ENP": 1216
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -166.544996,
+          53.89881
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "HPN",
+        "AIRPT_NAME": "White Plains, NY",
+        "TOT_ENP": 47334
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.70760345458984,
+          41.06700134277344
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "ISN",
+        "AIRPT_NAME": "Williston, ND",
+        "TOT_ENP": 2742
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          null,
+          null
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "JHM",
+        "AIRPT_NAME": "Kapalua, HI",
+        "TOT_ENP": 1914
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -156.673004,
+          20.9629
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "MMH",
+        "AIRPT_NAME": "Mammoth Lakes, CA",
+        "TOT_ENP": 474
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.84306,
+          37.625381
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "PPG",
+        "AIRPT_NAME": "Pago Pago, TT",
+        "TOT_ENP": 422
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -170.710007,
+          -14.331
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "PSE",
+        "AIRPT_NAME": "Ponce, PR",
+        "TOT_ENP": 3752
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.56300354003906,
+          18.00830078125
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "UIN",
+        "AIRPT_NAME": "Quincy, IL",
+        "TOT_ENP": 1054
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -91.194603,
+          39.942699
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "FOD",
+        "AIRPT_NAME": "Fort Dodge, IA",
+        "TOT_ENP": 1636
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.191237,
+          42.552624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "JST",
+        "AIRPT_NAME": "Johnstown, PA",
+        "TOT_ENP": 1931
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.83390045166016,
+          40.31610107421875
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "MCW",
+        "AIRPT_NAME": "Mason City, IA",
+        "TOT_ENP": 1636
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.329716,
+          43.159801
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "VCT",
+        "AIRPT_NAME": "Victoria, TX",
+        "TOT_ENP": 1685
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.9185028076172,
+          28.85260009765625
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "ALS",
+        "AIRPT_NAME": "Alamosa, CO",
+        "TOT_ENP": 548
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -105.866997,
+          37.434898
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "ILG",
+        "AIRPT_NAME": "Wilmington, DE",
+        "TOT_ENP": 114
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.606499,
+          39.678699
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "BIH",
+        "AIRPT_NAME": "Bishop, CA",
+        "TOT_ENP": 394
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.363998,
+          37.3731
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "TBN",
+        "AIRPT_NAME": "Fort Leonard Wood, MO",
+        "TOT_ENP": 424
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -92.140701,
+          37.7416
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "IATA": "ROP",
+        "AIRPT_NAME": "Rota, TT",
+        "TOT_ENP": 62
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.242996,
+          14.1743
+        ]
+      }
+    }
+  ]
+}
