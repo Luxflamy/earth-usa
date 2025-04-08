@@ -137,5 +137,5 @@ export function startRandomFlightPaths(earth, EARTH_RADIUS, BORDER_OFFSET) {
         const end = airportCoordinates[endIndex];
 
         createFlightPath(start.lat, start.lon, end.lat, end.lon, earth, EARTH_RADIUS, BORDER_OFFSET);
-    }, 1500); // 多久生成一条飞线
+    }, 1100); // 多久生成一条飞线
 }
