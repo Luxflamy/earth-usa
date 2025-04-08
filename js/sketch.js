@@ -10,6 +10,7 @@ import { initEventListeners, targetRotation, isDragging, previousMousePosition }
 import { animate } from './animationLoop.js';
 import { createDust } from './dustEffect.js';
 import { showLoadingScreen, hideLoadingScreen } from './loadingScreen.js';
+import { createFlightPath, setAirportCoordinates, startRandomFlightPaths } from './flightPathRenderer.js';
 
 const EARTH_RADIUS = 1;
 const BORDER_OFFSET = 0.001;
@@ -33,9 +34,16 @@ function init() {
         loadGeoJSON('assets/countries.geojson', 0x888888, 1, earth, EARTH_RADIUS, BORDER_OFFSET),
         loadGeoJSON('assets/us-states.geojson', 0x2596be, 4, earth, EARTH_RADIUS, BORDER_OFFSET),
         loadAirports('assets/airports.geojson', earth, EARTH_RADIUS, BORDER_OFFSET) // 加载机场数据
+            .then(airportCoordinates => {
+                // 设置机场坐标
+                setAirportCoordinates(airportCoordinates);
+            })
     ]).then(() => {
         // 确保所有资源加载完成后隐藏加载页面
         hideLoadingScreen();
+
+        // 开始随机生成飞线
+        startRandomFlightPaths(earth, EARTH_RADIUS, BORDER_OFFSET);
     });
 
     initEventListeners(camera, renderer);

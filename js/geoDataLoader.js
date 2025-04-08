@@ -17,16 +17,19 @@ export function loadGeoJSON(url, lineColor, lineWidth, earth, EARTH_RADIUS, BORD
 }
 
 export function loadAirports(url, earth, EARTH_RADIUS, BORDER_OFFSET) {
-    fetch(url)
+    return fetch(url)
         .then(response => response.json())
         .then(data => {
+            const airportCoordinates = [];
             data.features.forEach(feature => {
                 if (feature.geometry.type === 'Point') {
                     const [longitude, latitude] = feature.geometry.coordinates;
                     const traffic = feature.properties.TOT_ENP || 0; // 获取机场流量
                     addAirportMarker(latitude, longitude, earth, EARTH_RADIUS, BORDER_OFFSET, traffic);
+                    airportCoordinates.push({ lat: latitude, lon: longitude });
                 }
             });
+            return airportCoordinates; // 返回机场坐标数组
         });
 }
 
