@@ -13,6 +13,9 @@ export function initEventListeners(camera, renderer) {
     document.addEventListener('wheel', (e) => onMouseWheel(e)); // 添加鼠标滚轮事件监听
     document.addEventListener('gesturestart', onGestureStart); // 添加触控板缩放开始事件监听
     document.addEventListener('gesturechange', onGestureChange); // 添加触控板缩放事件监听
+    document.addEventListener('touchstart', onTouchStart); // 添加触摸开始事件监听
+    document.addEventListener('touchmove', onTouchMove);   // 添加触摸移动事件监听
+    document.addEventListener('touchend', onTouchEnd);     // 添加触摸结束事件监听
 }
 
 function onWindowResize(camera, renderer) {
@@ -60,6 +63,62 @@ function onGestureChange(event) {
         targetZoom += (1 - event.scale) * zoomSpeed;
     }
     targetZoom = Math.max(1.3, Math.min(4.8, targetZoom)); // 限制缩放范围
+}
+
+// 记录触摸状态
+let isTouching = false;
+let previousTouchPositions = [];
+let initialDistance = null;
+
+function onTouchStart(event) {
+    if (event.touches.length === 1) {
+        // 单指触控：开始拖动
+        isTouching = true;
+        previousTouchPositions = [{ x: event.touches[0].clientX, y: event.touches[0].clientY }];
+    } else if (event.touches.length === 2) {
+        // 双指触控：开始缩放
+        isTouching = false; // 禁用拖动
+        initialDistance = getDistance(event.touches[0], event.touches[1]);
+    }
+}
+
+function onTouchMove(event) {
+    if (event.touches.length === 1 && isTouching) {
+        // 单指触控：拖动
+        const currentTouch = { x: event.touches[0].clientX, y: event.touches[0].clientY };
+        const deltaMove = {
+            x: currentTouch.x - previousTouchPositions[0].x,
+            y: currentTouch.y - previousTouchPositions[0].y,
+        };
+        const sensitivity = 0.002;
+        targetRotation.y += deltaMove.x * sensitivity;
+        targetRotation.x += deltaMove.y * sensitivity;
+        previousTouchPositions = [currentTouch];
+    } else if (event.touches.length === 2) {
+        // 双指触控：缩放
+        const currentDistance = getDistance(event.touches[0], event.touches[1]);
+        const zoomSpeed = 0.005; // 缩放灵敏度
+        if (initialDistance) {
+            targetZoom += (initialDistance - currentDistance) * zoomSpeed;
+            targetZoom = Math.max(1.3, Math.min(4.8, targetZoom)); // 限制缩放范围
+        }
+        initialDistance = currentDistance;
+    }
+}
+
+function onTouchEnd(event) {
+    if (event.touches.length === 0) {
+        // 触控结束
+        isTouching = false;
+        initialDistance = null;
+    }
+}
+
+function getDistance(touch1, touch2) {
+    // 计算两点之间的距离
+    const dx = touch2.clientX - touch1.clientX;
+    const dy = touch2.clientY - touch1.clientY;
+    return Math.sqrt(dx * dx + dy * dy);
 }
 
 export function updateZoom(camera) {
