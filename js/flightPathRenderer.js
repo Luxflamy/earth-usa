@@ -7,62 +7,108 @@ export function createFlightPath(startLat, startLon, endLat, endLon, earth, EART
     // 创建飞线的曲线
     const curve = new THREE.QuadraticBezierCurve3(
         start,
-        start.clone().add(end).multiplyScalar(0.5).setLength(EARTH_RADIUS + BORDER_OFFSET + 0.1), // 控制点
+        start.clone().add(end).multiplyScalar(0.5).setLength(EARTH_RADIUS + BORDER_OFFSET + 0.1),
         end
     );
 
-    const points = curve.getPoints(50); // 曲线分段
+    const points = curve.getPoints(50);
     const geometry = new THREE.BufferGeometry().setFromPoints(points);
 
-    // 创建飞线材质
-    const material = new THREE.LineBasicMaterial({
-        color: 0xff6361, // 飞线颜色
-        linewidth: 2,    // 调整线条宽度
+    // 创建自定义荧光材质
+    const material = new THREE.ShaderMaterial({
+        uniforms: {
+            time: { value: 0 },
+            color: { value: new THREE.Color(0xff6361) },
+            glowColor: { value: new THREE.Color(0xff8080) }
+        },
+        vertexShader: `
+            varying vec3 vPosition;
+            void main() {
+                vPosition = position;
+                gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+            }
+        `,
+        fragmentShader: `
+            uniform vec3 color;
+            uniform vec3 glowColor;
+            uniform float time;
+            varying vec3 vPosition;
+            
+            void main() {
+                float glow = sin(time * 3.0) * 0.5 + 0.5;
+                vec3 finalColor = mix(color, glowColor, glow);
+                gl_FragColor = vec4(finalColor, 1.0);
+            }
+        `,
         transparent: true,
-        opacity: 1    
+        blending: THREE.AdditiveBlending,
+        depthWrite: false
     });
 
     const line = new THREE.Line(geometry, material);
     earth.add(line);
 
+    // 添加辅助发光线
+    const glowMaterial = new THREE.LineBasicMaterial({
+        color: 0xff8080,
+        transparent: true,
+        opacity: 0.3,
+        blending: THREE.AdditiveBlending,
+        linewidth: 2
+    });
+
+    const glowLine = new THREE.Line(geometry.clone(), glowMaterial);
+    earth.add(glowLine);
+
     // 动画效果
-    animateFlight(line, points, earth, EARTH_RADIUS, BORDER_OFFSET, endLat, endLon);
+    animateFlight(line, glowLine, points, earth, EARTH_RADIUS, BORDER_OFFSET, endLat, endLon);
 }
 
-function animateFlight(line, points, earth, EARTH_RADIUS, BORDER_OFFSET, endLat, endLon) {
+function animateFlight(line, glowLine, points, earth, EARTH_RADIUS, BORDER_OFFSET, endLat, endLon) {
     const totalPoints = points.length;
     let currentPoint = 0;
+    let time = 0;
 
     function animate() {
         if (currentPoint < totalPoints) {
             const visiblePoints = points.slice(0, currentPoint + 1);
             line.geometry.setFromPoints(visiblePoints);
+            glowLine.geometry.setFromPoints(visiblePoints);
+            
+            // 更新着色器时间变量，产生闪烁效果
+            time += 0.1;
+            line.material.uniforms.time.value = time;
+            
             currentPoint++;
             requestAnimationFrame(animate);
         } else {
-            // 飞线到达终点后触发机场闪烁效果
             createFlashingRing(endLat, endLon, earth, EARTH_RADIUS, BORDER_OFFSET);
-
-            // 开始让飞线从后端逐渐消失
-            fadeOutFlight(line, points, earth);
+            fadeOutFlight(line, glowLine, points, earth);
         }
     }
 
     animate();
 }
 
-function fadeOutFlight(line, points, earth) {
+function fadeOutFlight(line, glowLine, points, earth) {
     let currentPoint = points.length;
+    let opacity = 1;
 
     function animateFadeOut() {
         if (currentPoint > 0) {
             const visiblePoints = points.slice(points.length - currentPoint);
             line.geometry.setFromPoints(visiblePoints);
+            glowLine.geometry.setFromPoints(visiblePoints);
+            
+            // 逐渐降低透明度
+            opacity -= 0.02;
+            glowLine.material.opacity = opacity * 0.3;
+            
             currentPoint--;
             requestAnimationFrame(animateFadeOut);
         } else {
-            // 动画结束后从场景中移除飞线
             earth.remove(line);
+            earth.remove(glowLine);
         }
     }
 
@@ -83,13 +129,13 @@ function createFlashingRing(lat, lon, earth, EARTH_RADIUS, BORDER_OFFSET) {
     const position = latLongToVector3(lat, lon, EARTH_RADIUS + BORDER_OFFSET + 0.001);
     sprite.position.copy(position);
 
-    const scale = 0.02; // 初始缩放大小
+    const scale = 0.04; // 初始缩放大小
     sprite.scale.set(scale, scale, 1);
     earth.add(sprite);
 
     // 闪烁动画
     let growing = true;
-    const maxScale = 0.03;
+    const maxScale = 0.06;
     const minScale = 0.01;
 
     function animateRing() {
@@ -137,5 +183,5 @@ export function startRandomFlightPaths(earth, EARTH_RADIUS, BORDER_OFFSET) {
         const end = airportCoordinates[endIndex];
 
         createFlightPath(start.lat, start.lon, end.lat, end.lon, earth, EARTH_RADIUS, BORDER_OFFSET);
-    }, 1100); // 多久生成一条飞线
+    }, 1000); // 每2秒生成一条飞线
 }
