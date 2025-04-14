@@ -1,4 +1,5 @@
 import { setFromAirportCoordinates, setToAirportCoordinates } from '../flightPathRenderer.js';
+import { addToggleFunctionality } from './togglePanel.js';
 
 export function createInputPanel() {
     const panel = document.createElement('div');
@@ -21,9 +22,11 @@ export function createInputPanel() {
         </div>
         <button id="search-btn">Search</button>
     `;
-    
+
     document.body.appendChild(panel);
-    
+
+    addToggleFunctionality(panel); // 添加按钮功能
+
     // 添加输入验证
     const fromInput = panel.querySelector('#from');
     const toInput = panel.querySelector('#to');
