@@ -80,3 +80,30 @@
 .input-panel::-webkit-scrollbar-thumb:hover {
     background: rgba(255, 255, 255, 0.5);
 }
+
+@media (max-width: 768px) {
+    .input-panel {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        flex-direction: row;
+        gap: 10px;
+        overflow-x: auto; /* 添加水平滚动以适应小屏幕 */
+    }
+
+    .input-group {
+        flex: 1;
+        margin-bottom: 0;
+    }
+
+    #search-btn {
+        flex-shrink: 0;
+        width: auto;
+        padding: 10px 20px;
+    }
+}
