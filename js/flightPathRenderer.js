@@ -1,5 +1,7 @@
 import { latLongToVector3 } from './earthModel.js';
 
+let activeFlights = []; // 存储当前所有飞线
+
 export function createFlightPath(startLat, startLon, endLat, endLon, earth, EARTH_RADIUS, BORDER_OFFSET) {
     const start = latLongToVector3(startLat, startLon, EARTH_RADIUS + BORDER_OFFSET);
     const end = latLongToVector3(endLat, endLon, EARTH_RADIUS + BORDER_OFFSET);
@@ -48,6 +50,9 @@ export function createFlightPath(startLat, startLon, endLat, endLon, earth, EART
     const line = new THREE.Line(geometry, material);
     earth.add(line);
 
+    // 添加到活动飞线列表
+    activeFlights.push(line);
+
     // 添加辅助发光线
     const glowMaterial = new THREE.LineBasicMaterial({
         color: 0xff8080,
@@ -59,6 +64,9 @@ export function createFlightPath(startLat, startLon, endLat, endLon, earth, EART
 
     const glowLine = new THREE.Line(geometry.clone(), glowMaterial);
     earth.add(glowLine);
+
+    // 添加到活动飞线列表
+    activeFlights.push(glowLine);
 
     // 动画效果
     animateFlight(line, glowLine, points, earth, EARTH_RADIUS, BORDER_OFFSET, endLat, endLon);
@@ -160,18 +168,32 @@ function createFlashingRing(lat, lon, earth, EARTH_RADIUS, BORDER_OFFSET) {
     animateRing();
 }
 
-let airportCoordinates = []; // 全局变量，用于存储所有机场的坐标
+let airportCoordinates = [];
+let airportCoordinates_From = []; // 存储指定起点机场的坐标
+let airportCoordinates_To = [];   // 存储指定终点机场的坐标
 
 export function setAirportCoordinates(coordinates) {
     airportCoordinates = coordinates; // 从外部设置机场坐标
 }
 
+export function setFromAirportCoordinates(fromCoordinates) {
+    airportCoordinates_From = [fromCoordinates]; // 设置起点机场
+}
+
+export function setToAirportCoordinates(toCoordinates) {
+    airportCoordinates_To = [toCoordinates]; // 设置终点机场
+}
+// startRandomFlightPaths
 export function startRandomFlightPaths(earth, EARTH_RADIUS, BORDER_OFFSET) {
+    if (flightInterval) {
+        clearInterval(flightInterval); // 清除之前的定时器
+    }
+    
     if (airportCoordinates.length < 2) {
         console.warn('Not enough airports to create flight paths.');
         return;
     }
-
+    clearAllFlights(earth);
     setInterval(() => {
         const startIndex = Math.floor(Math.random() * airportCoordinates.length);
         let endIndex;
@@ -183,5 +205,84 @@ export function startRandomFlightPaths(earth, EARTH_RADIUS, BORDER_OFFSET) {
         const end = airportCoordinates[endIndex];
 
         createFlightPath(start.lat, start.lon, end.lat, end.lon, earth, EARTH_RADIUS, BORDER_OFFSET);
-    }, 1000); // 每2秒生成一条飞线
+    }, 4000); // 每秒生成一条飞线
 }
+
+let flightInterval = null; // 全局变量，用于存储当前的定时器
+
+export function startFlightsFromAirport(earth, EARTH_RADIUS, BORDER_OFFSET) {
+    if (airportCoordinates_From.length === 0 || airportCoordinates.length < 2) {
+        console.warn('Not enough airports to create flight paths from the specified airport.');
+        return;
+    }
+
+    const from = airportCoordinates_From[0];
+    if (flightInterval) {
+        clearInterval(flightInterval); // 清除之前的定时器
+    }
+    flightInterval = setInterval(() => {
+        let endIndex;
+        do {
+            endIndex = Math.floor(Math.random() * airportCoordinates.length);
+        } while (
+            airportCoordinates[endIndex].lat === from.lat &&
+            airportCoordinates[endIndex].lon === from.lon
+        );
+
+        const end = airportCoordinates[endIndex];
+        createFlightPath(from.lat, from.lon, end.lat, end.lon, earth, EARTH_RADIUS, BORDER_OFFSET);
+    }, 800); // 每秒生成一条飞线
+}
+
+export function startFlightsToAirport(earth, EARTH_RADIUS, BORDER_OFFSET) {
+    if (airportCoordinates_To.length === 0 || airportCoordinates.length < 2) {
+        console.warn('Not enough airports to create flight paths to the specified airport.');
+        return;
+    }
+
+    const to = airportCoordinates_To[0];
+    if (flightInterval) {
+        clearInterval(flightInterval); // 清除之前的定时器
+    }
+    flightInterval = setInterval(() => {
+        let startIndex;
+        do {
+            startIndex = Math.floor(Math.random() * airportCoordinates.length);
+        } while (
+            airportCoordinates[startIndex].lat === to.lat &&
+            airportCoordinates[startIndex].lon === to.lon
+        );
+        
+
+        const start = airportCoordinates[startIndex];
+        createFlightPath(start.lat, start.lon, to.lat, to.lon, earth, EARTH_RADIUS, BORDER_OFFSET);
+    }, 800); // 每秒生成一条飞线
+}
+
+export function startFlightsFromToAirport(earth, EARTH_RADIUS, BORDER_OFFSET) {
+    if (airportCoordinates_From.length === 0 || airportCoordinates_To.length === 0) {
+        console.warn('Not enough data to create flight paths between the specified airports.');
+        return;
+    }
+
+    const from = airportCoordinates_From[0];
+    const to = airportCoordinates_To[0];
+    if (flightInterval) {
+        clearInterval(flightInterval); // 清除之前的定时器
+    }
+
+    // 创建从起点到终点的飞线
+    flightInterval = setInterval(() => {
+        createFlightPath(from.lat, from.lon, to.lat, to.lon, earth, EARTH_RADIUS, BORDER_OFFSET);
+    }, 1200); // 每秒生成一条飞线
+    // createFlightPath(from.lat, from.lon, to.lat, to.lon, earth, EARTH_RADIUS, BORDER_OFFSET);
+}
+
+export function clearAllFlights(earth) {
+    // 删除所有活动飞线
+    activeFlights.forEach(flight => {
+        earth.remove(flight);
+    });
+    activeFlights = []; // 清空活动飞线列表
+}
+

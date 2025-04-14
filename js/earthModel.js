@@ -60,18 +60,25 @@ export function initEarth(scene, EARTH_RADIUS, BORDER_OFFSET) {
     });
 
     earth = new THREE.Mesh(geometry, material);
-    scene.add(earth);
 
-    // 删除外部辉光层相关代码
+    // 设置地球的位置
+    earth.position.set(0, -0.5, 0.7); // 调整地球的初始位置, 避免与背景重叠
+    earth.rotation.y = Math.PI / 4; // 初始旋转角度
+    earth.rotation.x = Math.PI / 4; // 初始旋转角度
+ scene.add(earth);
 }
-
 
 export function latLongToVector3(lat, lon, radius) {
-    const phi = THREE.MathUtils.degToRad(90 - lat);
-    const theta = THREE.MathUtils.degToRad(lon);
-    return new THREE.Vector3(
-        radius * Math.sin(phi) * Math.cos(theta),
-        radius * Math.cos(phi),
-        -radius * Math.sin(phi) * Math.sin(theta)
-    );
+    // 将经纬度转换为弧度
+    const phi = THREE.MathUtils.degToRad(90 - lat); // 纬度转换为极角(phi)
+    const theta = THREE.MathUtils.degToRad(lon);     // 经度转换为方位角(theta)
+    
+    // 计算球面坐标
+    const x = radius * Math.sin(phi) * Math.cos(theta);
+    const y = radius * Math.cos(phi);
+    const z = -radius * Math.sin(phi) * Math.sin(theta); // 注意z轴取负
+    
+    return new THREE.Vector3(x, y, z);
 }
+
+

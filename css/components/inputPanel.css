@@ -1,0 +1,82 @@
+.input-panel {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(38, 50, 56, 0.4); /* 降低背景透明度从 0.8 到 0.4 */
+    backdrop-filter: blur(8px); /* 稍微减小模糊效果以配合更低的透明度 */
+    color: white;
+    width: 320px;
+    padding: 40px 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    overflow-y: auto; /* 添加垂直滚动 */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #a0a0a0;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 16px;
+    box-sizing: border-box; /* 添加这行确保padding不会影响总宽度 */
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #2596be;
+}
+
+#search-btn {
+    width: 100%;
+    padding: 10px;
+    background: #2596be;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#search-btn:hover {
+    background: #1b7592;
+}
+
+/* 输入框占位符样式 */
+.input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* 添加滚动条样式 */
+.input-panel::-webkit-scrollbar {
+    width: 6px;
+}
+
+.input-panel::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.input-panel::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+}
+
+.input-panel::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}

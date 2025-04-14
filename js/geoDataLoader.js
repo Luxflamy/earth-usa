@@ -16,6 +16,7 @@ export function loadGeoJSON(url, lineColor, lineWidth, earth, EARTH_RADIUS, BORD
         });
 }
 
+export const iataToCoordinates = {}; // 全局对象，用于存储 IATA 到经纬度的映射
 export function loadAirports(url, earth, EARTH_RADIUS, BORDER_OFFSET) {
     return fetch(url)
         .then(response => response.json())
@@ -25,6 +26,10 @@ export function loadAirports(url, earth, EARTH_RADIUS, BORDER_OFFSET) {
                 if (feature.geometry.type === 'Point') {
                     const [longitude, latitude] = feature.geometry.coordinates;
                     const traffic = feature.properties.TOT_ENP || 0; // 获取机场流量
+                    const iata = feature.properties.IATA || ''; // 获取 IATA 代码
+                    if (iata) {
+                        iataToCoordinates[iata] = { lat: latitude, lon: longitude }; // 存储映射
+                    }
                     addAirportMarker(latitude, longitude, earth, EARTH_RADIUS, BORDER_OFFSET, traffic);
                     airportCoordinates.push({ lat: latitude, lon: longitude });
                 }

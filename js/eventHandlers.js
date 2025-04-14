@@ -45,7 +45,7 @@ function onMouseUp() {
 function onMouseWheel(event) {
     const zoomSpeed = 0.0005; // 缩放灵敏度（值越小灵敏度越低）
     targetZoom += event.deltaY * zoomSpeed; // 根据滚轮方向调整目标缩放值
-    targetZoom = Math.max(1.3, Math.min(4.8, targetZoom)); // 限制缩放范围，最小值设置为1.5
+    targetZoom = Math.max(1.8, Math.min(4, targetZoom)); // 限制缩放范围，最小值设置为3
 }
 
 function onGestureStart(event) {
@@ -54,7 +54,7 @@ function onGestureStart(event) {
 
 function onGestureChange(event) {
     event.preventDefault(); // 阻止默认行为（如页面缩放）
-    const zoomSpeed = 0.07; // 缩放灵敏度
+    const zoomSpeed = 0.05; // 缩放灵敏度
     if (event.scale > 1) {
         // 放大
         targetZoom -= (event.scale - 1) * zoomSpeed;
@@ -62,7 +62,7 @@ function onGestureChange(event) {
         // 缩小
         targetZoom += (1 - event.scale) * zoomSpeed;
     }
-    targetZoom = Math.max(1.3, Math.min(4.8, targetZoom)); // 限制缩放范围
+    targetZoom = Math.max(1.8, Math.min(4, targetZoom)); // 限制缩放范围,最小值设置为3
 }
 
 // 记录触摸状态
@@ -97,10 +97,10 @@ function onTouchMove(event) {
     } else if (event.touches.length === 2) {
         // 双指触控：缩放
         const currentDistance = getDistance(event.touches[0], event.touches[1]);
-        const zoomSpeed = 0.005; // 缩放灵敏度
+        const zoomSpeed = 0.003; // 缩放灵敏度
         if (initialDistance) {
             targetZoom += (initialDistance - currentDistance) * zoomSpeed;
-            targetZoom = Math.max(1.3, Math.min(4.8, targetZoom)); // 限制缩放范围
+            targetZoom = Math.max(1.8, Math.min(4, targetZoom)); // 限制缩放范围,最小值设置为3
         }
         initialDistance = currentDistance;
     }
