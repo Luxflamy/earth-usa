@@ -23,7 +23,7 @@ export function initCamera() {
         0.1,
         1000
     );
-    camera.position.z = 2;
+    camera.position.z = 2; // 调整此值以更改初始缩放大小
 }
 
 export function initRenderer() {

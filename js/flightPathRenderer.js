@@ -231,7 +231,7 @@ export function startFlightsFromAirport(earth, EARTH_RADIUS, BORDER_OFFSET) {
 
         const end = airportCoordinates[endIndex];
         createFlightPath(from.lat, from.lon, end.lat, end.lon, earth, EARTH_RADIUS, BORDER_OFFSET);
-    }, 800); // 每秒生成一条飞线
+    }, 500); // 每秒生成一条飞线
 }
 
 export function startFlightsToAirport(earth, EARTH_RADIUS, BORDER_OFFSET) {
@@ -252,11 +252,10 @@ export function startFlightsToAirport(earth, EARTH_RADIUS, BORDER_OFFSET) {
             airportCoordinates[startIndex].lat === to.lat &&
             airportCoordinates[startIndex].lon === to.lon
         );
-        
 
         const start = airportCoordinates[startIndex];
         createFlightPath(start.lat, start.lon, to.lat, to.lon, earth, EARTH_RADIUS, BORDER_OFFSET);
-    }, 800); // 每秒生成一条飞线
+    }, 500); // 每秒生成一条飞线
 }
 
 export function startFlightsFromToAirport(earth, EARTH_RADIUS, BORDER_OFFSET) {

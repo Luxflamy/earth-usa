@@ -3,14 +3,16 @@ export let previousMousePosition = { x: 0, y: 0 };
 export let targetRotation = { x: 0, y: 0 };
 
 let targetZoom = 2; // 目标缩放值
-let currentZoom = 2; // 当前缩放值
+let currentZoom = 2000; // 当前缩放值
+let targetY = 0; // 目标Y轴位置
+let currentY = 0; // 当前Y轴位置
 
 export function initEventListeners(camera, renderer) {
     window.addEventListener('resize', () => onWindowResize(camera, renderer));
     document.addEventListener('mousedown', onMouseDown);
     document.addEventListener('mousemove', onMouseMove);
     document.addEventListener('mouseup', onMouseUp);
-    document.addEventListener('wheel', (e) => onMouseWheel(e)); // 添加鼠标滚轮事件监听
+    document.addEventListener('wheel', (e) => onMouseWheel(e, camera)); // 添加鼠标滚轮事件监听
     document.addEventListener('gesturestart', onGestureStart); // 添加触控板缩放开始事件监听
     document.addEventListener('gesturechange', onGestureChange); // 添加触控板缩放事件监听
     document.addEventListener('touchstart', onTouchStart); // 添加触摸开始事件监听
@@ -42,10 +44,17 @@ function onMouseUp() {
     isDragging = false;
 }
 
-function onMouseWheel(event) {
+function onMouseWheel(event, camera) {
     const zoomSpeed = 0.0005; // 缩放灵敏度（值越小灵敏度越低）
+    const yShiftSpeed = 0.00011; // Y轴升降灵敏度
+
     targetZoom += event.deltaY * zoomSpeed; // 根据滚轮方向调整目标缩放值
     targetZoom = Math.max(1.8, Math.min(4, targetZoom)); // 限制缩放范围，最小值设置为3
+
+    // 添加Y轴升降效果
+    const yShift = event.deltaY * yShiftSpeed;
+    targetY -= yShift; // 根据滚轮方向调整目标Y轴位置
+    targetY = Math.max(-0.48, Math.min(0, targetY)); // 限制Y轴范围
 }
 
 function onGestureStart(event) {
@@ -124,5 +133,8 @@ function getDistance(touch1, touch2) {
 export function updateZoom(camera) {
     const easingFactor = 0.1; // 缓动系数，值越小缓动越慢
     currentZoom += (targetZoom - currentZoom) * easingFactor; // 缓动插值
-    camera.position.z = currentZoom; // 更新相机位置
+    currentY += (targetY - currentY) * easingFactor ; // Y轴缓动插值
+
+    camera.position.z = currentZoom; // 更新相机Z轴位置
+    camera.position.y = currentY; // 更新相机Y轴位置
 }
