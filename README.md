@@ -4,6 +4,8 @@
 
 A simple interactive 3D Earth visualization using THREE.js, featuring US airports with address and traffic information. Inspired by [launchit.shanemielke.com](https://launchit.shanemielke.com) (MIT licensed).
 
+[点击这里查看小组会1内容](./meetings/小组会1.md)
+
 ## Features
 
 - 🌍 Interactive 3D Earth model with realistic textures
