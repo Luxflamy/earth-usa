@@ -102,6 +102,12 @@ canvas {
     transform: translateX(calc(-100% + 20px)); /* 保留按钮可见 */
 }
 
+.input-panel, .display-panel {
+    position: fixed;
+    z-index: 1000; /* 确保面板在地球之上 */
+    pointer-events: auto; /* 确保面板可以接收鼠标事件 */
+}
+
 .toggle-panel-btn {
     position: fixed;
     top: 50%; /* 垂直居中 */

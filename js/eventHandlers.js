@@ -7,17 +7,53 @@ let currentZoom = 2000; // 当前缩放值
 let targetY = 0; // 目标Y轴位置
 let currentY = 0; // 当前Y轴位置
 
+export let isMouseOverPanel = false; // 标志鼠标是否在面板上
+
+// 通用节流函数,用来优化鼠标移动性能
+function throttle(func, limit) {
+    let lastFunc;
+    let lastRan;
+    return function (...args) {
+        const context = this;
+        if (!lastRan) {
+            func.apply(context, args);
+            lastRan = Date.now();
+        } else {
+            clearTimeout(lastFunc);
+            lastFunc = setTimeout(() => {
+                if (Date.now() - lastRan >= limit) {
+                    func.apply(context, args);
+                    lastRan = Date.now();
+                }
+            }, limit - (Date.now() - lastRan));
+        }
+    };
+}
+
 export function initEventListeners(camera, renderer) {
     window.addEventListener('resize', () => onWindowResize(camera, renderer));
     document.addEventListener('mousedown', onMouseDown);
-    document.addEventListener('mousemove', onMouseMove);
+    document.addEventListener('mousemove', throttle(onMouseMove, 50)); // 添加节流
     document.addEventListener('mouseup', onMouseUp);
-    document.addEventListener('wheel', (e) => onMouseWheel(e, camera)); // 添加鼠标滚轮事件监听
-    document.addEventListener('gesturestart', onGestureStart); // 添加触控板缩放开始事件监听
-    document.addEventListener('gesturechange', onGestureChange); // 添加触控板缩放事件监听
-    document.addEventListener('touchstart', onTouchStart); // 添加触摸开始事件监听
-    document.addEventListener('touchmove', onTouchMove);   // 添加触摸移动事件监听
-    document.addEventListener('touchend', onTouchEnd);     // 添加触摸结束事件监听
+    document.addEventListener('wheel', throttle((e) => onMouseWheel(e, camera), 50)); // 添加节流
+    document.addEventListener('gesturestart', onGestureStart);
+    document.addEventListener('gesturechange', throttle(onGestureChange, 50)); // 添加节流
+    document.addEventListener('touchstart', onTouchStart);
+    document.addEventListener('touchmove', throttle(onTouchMove, 50)); // 添加节流
+    document.addEventListener('touchend', onTouchEnd);
+
+    // 使用事件委托监听面板的鼠标进入和离开事件
+    document.addEventListener('mouseover', (event) => {
+        if (event.target.closest('.input-panel, .display-panel')) {
+            isMouseOverPanel = true; // 鼠标进入面板
+        }
+    });
+
+    document.addEventListener('mouseout', (event) => {
+        if (event.target.closest('.input-panel, .display-panel')) {
+            isMouseOverPanel = false; // 鼠标离开面板
+        }
+    });
 }
 
 function onWindowResize(camera, renderer) {
@@ -27,12 +63,13 @@ function onWindowResize(camera, renderer) {
 }
 
 function onMouseDown(e) {
+    if (isMouseOverPanel) return; // 忽略鼠标事件
     isDragging = true;
     previousMousePosition = { x: e.clientX, y: e.clientY };
 }
 
 function onMouseMove(e) {
-    if (!isDragging) return;
+    if (isMouseOverPanel || !isDragging) return; // 忽略鼠标事件
     const deltaMove = { x: e.clientX - previousMousePosition.x, y: e.clientY - previousMousePosition.y };
     const sensitivity = 0.002;
     targetRotation.y += deltaMove.x * sensitivity;
@@ -41,10 +78,13 @@ function onMouseMove(e) {
 }
 
 function onMouseUp() {
+    if (isMouseOverPanel) return; // 忽略鼠标事件
     isDragging = false;
 }
 
 function onMouseWheel(event, camera) {
+    if (isMouseOverPanel) return; // 忽略鼠标事件
+
     const zoomSpeed = 0.0005; // 缩放灵敏度（值越小灵敏度越低）
     const yShiftSpeed = 0.00011; // Y轴升降灵敏度
 
@@ -63,6 +103,8 @@ function onGestureStart(event) {
 
 function onGestureChange(event) {
     event.preventDefault(); // 阻止默认行为（如页面缩放）
+    if (isMouseOverPanel) return; // 忽略鼠标事件
+
     const zoomSpeed = 0.05; // 缩放灵敏度
     if (event.scale > 1) {
         // 放大
@@ -80,6 +122,8 @@ let previousTouchPositions = [];
 let initialDistance = null;
 
 function onTouchStart(event) {
+    if (isMouseOverPanel) return; // 忽略鼠标事件
+
     if (event.touches.length === 1) {
         // 单指触控：开始拖动
         isTouching = true;
@@ -92,6 +136,8 @@ function onTouchStart(event) {
 }
 
 function onTouchMove(event) {
+    if (isMouseOverPanel) return; // 忽略鼠标事件
+
     if (event.touches.length === 1 && isTouching) {
         // 单指触控：拖动
         const currentTouch = { x: event.touches[0].clientX, y: event.touches[0].clientY };
@@ -131,6 +177,8 @@ function getDistance(touch1, touch2) {
 }
 
 export function updateZoom(camera) {
+    if (isMouseOverPanel) return; // 忽略鼠标事件
+
     const easingFactor = 0.1; // 缓动系数，值越小缓动越慢
     currentZoom += (targetZoom - currentZoom) * easingFactor; // 缓动插值
     currentY += (targetY - currentY) * easingFactor ; // Y轴缓动插值
