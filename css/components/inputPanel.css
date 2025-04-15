@@ -13,6 +13,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    border-radius: 20px; /* 添加圆角 */
 }
 
 .input-group {
@@ -30,7 +31,7 @@
     width: 100%;
     padding: 8px;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 4px;
+    border-radius: 10px;
     background: rgba(255, 255, 255, 0.1);
     color: white;
     font-size: 16px;
@@ -46,7 +47,7 @@
     width: 100%;
     padding: 8px;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 4px;
+    border-radius: 10px;
     background: rgba(255, 255, 255, 0.1);
     color: white;
     font-size: 16px;
@@ -67,7 +68,7 @@
     padding: 10px;
     background: #2596be;
     border: none;
-    border-radius: 4px;
+    border-radius: 10px;
     color: white;
     font-size: 16px;
     cursor: pointer;
@@ -94,7 +95,7 @@
 
 .input-panel::-webkit-scrollbar-thumb {
     background: rgba(255, 255, 255, 0.3);
-    border-radius: 3px;
+    border-radius: 20px;
 }
 
 .input-panel::-webkit-scrollbar-thumb:hover {
@@ -136,7 +137,7 @@
     background: rgba(38, 50, 56, 0.4); /* 与 inputPanel 保持一致 */
     backdrop-filter: blur(8px);
     color: white;
-    width: 320px;
+    width: 1269.5px; /* 增加宽度 */
     padding: 40px 20px;
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
     overflow-y: auto;
@@ -145,6 +146,7 @@
     gap: 20px;
     transform: translateX(100%); /* 初始隐藏状态 */
     transition: transform 0.3s ease-in-out; /* 确保过渡效果 */
+    border-radius: 20px; /* 添加圆角 */
 }
 
 .display-panel.visible {
@@ -165,7 +167,7 @@
 
 .flight-card {
     background: rgba(38, 50, 56, 0.45); /* 调整透明度到 0.45 */
-    border-radius: 8px;
+    border-radius: 20px;
     padding: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* 卡片阴影 */
     color: white;

@@ -1,9 +1,11 @@
-/* css/style.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
 body, html {
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #000; /* 设置背景颜色为黑色，与地球背景一致 */
+    font-family: 'Roboto', sans-serif; /* 使用字体 Roboto */
 }
 
 canvas {
