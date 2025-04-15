@@ -1,5 +1,6 @@
 import { setFromAirportCoordinates, setToAirportCoordinates } from '../flightPathRenderer.js';
 import { addToggleFunctionality } from './togglePanel.js';
+import { collectFlightData } from '../user/input.js';
 
 export function createInputPanel() {
     const panel = document.createElement('div');
@@ -20,12 +21,21 @@ export function createInputPanel() {
             <label for="time">Time:</label>
             <input type="datetime-local" id="time">
         </div>
+        <div class="input-group">
+            <label for="flight-number">Flight Number:</label>
+            <input type="text" id="flight-number" placeholder="Flight number (e.g. AA123)" maxlength="10">
+        </div>
         <button id="search-btn">Search</button>
     `;
 
     document.body.appendChild(panel);
 
-    addToggleFunctionality(panel); // 添加按钮功能
+    addToggleFunctionality(panel, () => {
+        const displayPanel = document.querySelector('.display-panel');
+        if (displayPanel) {
+            displayPanel.classList.toggle('visible', !panel.classList.contains('hidden'));
+        }
+    }); // 添加按钮功能并同步右侧版面
 
     // 添加输入验证
     const fromInput = panel.querySelector('#from');
@@ -69,6 +79,28 @@ export function createInputPanel() {
             }
         });
     });
+
+    const searchBtn = panel.querySelector('#search-btn');
+
+    searchBtn.addEventListener('click', () => {
+        let displayPanel = document.querySelector('.display-panel');
+        
+        // 如果右侧版面不存在，则创建
+        if (!displayPanel) {
+            displayPanel = document.createElement('div');
+            displayPanel.classList.add('display-panel');
+            document.body.appendChild(displayPanel);
+
+            // 强制触发重绘以确保动画生效
+            void displayPanel.offsetWidth;
+        }
+
+        // 添加 visible 类以触发动画
+        displayPanel.classList.add('visible');
+    });
+
+    // 调用 collectFlightData
+    collectFlightData();
 
     return panel;
 }

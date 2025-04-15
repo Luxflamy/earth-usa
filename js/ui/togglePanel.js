@@ -1,4 +1,4 @@
-export function addToggleFunctionality(panel) {
+export function addToggleFunctionality(panel, onToggleCallback) {
     const toggleBtn = document.createElement('button');
     toggleBtn.classList.add('toggle-panel-btn');
     toggleBtn.textContent = '❮';
@@ -7,13 +7,16 @@ export function addToggleFunctionality(panel) {
     toggleBtn.addEventListener('click', () => {
         panel.classList.toggle('hidden');
         toggleBtn.textContent = panel.classList.contains('hidden') ? '❯' : '❮'; // 切换按钮箭头方向
+
+        if (onToggleCallback) {
+            onToggleCallback(); // 调用同步回调
+        }
     });
 
     // 同步按钮位置
     const updateButtonPosition = () => {
         const panelRect = panel.getBoundingClientRect();
         toggleBtn.style.top = `${panelRect.top + panelRect.height / 2}px`; // 按钮垂直居中
-        // 按键向右移动
     };
 
     // 初始位置更新

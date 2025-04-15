@@ -42,6 +42,26 @@
     border-color: #2596be;
 }
 
+#flight-number {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+#flight-number:focus {
+    outline: none;
+    border-color: #2596be;
+}
+
+#flight-number::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
 #search-btn {
     width: 100%;
     padding: 10px;
@@ -106,4 +126,67 @@
         width: auto;
         padding: 10px 20px;
     }
+}
+
+.display-panel {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(38, 50, 56, 0.4); /* 与 inputPanel 保持一致 */
+    backdrop-filter: blur(8px);
+    color: white;
+    width: 320px;
+    padding: 40px 20px;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transform: translateX(100%); /* 初始隐藏状态 */
+    transition: transform 0.3s ease-in-out; /* 确保过渡效果 */
+}
+
+.display-panel.visible {
+    transform: translateX(0); /* 显示状态 */
+}
+
+.display-panel h3 {
+    margin: 0;
+    font-size: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 10px;
+}
+
+.display-panel p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.flight-card {
+    background: rgba(38, 50, 56, 0.45); /* 调整透明度到 0.45 */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* 卡片阴影 */
+    color: white;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.flight-card:hover {
+    transform: translateY(-5px); /* 悬停时上移效果 */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* 悬停时阴影增强 */
+}
+
+.flight-card h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 10px;
+}
+
+.flight-card-content p {
+    margin: 5px 0;
+    font-size: 14px;
+    line-height: 1.5;
 }
