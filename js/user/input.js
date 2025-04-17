@@ -5,7 +5,7 @@ export function collectFlightData() {
     const flightNumberInput = document.querySelector('#flight-number');
     const searchButton = document.querySelector('#search-btn');
 
-    searchButton.addEventListener('click', () => {
+    searchButton.addEventListener('click', async () => {
         const flightData = {
             from: fromInput.value.trim().toUpperCase(),
             to: toInput.value.trim().toUpperCase(),
@@ -15,6 +15,41 @@ export function collectFlightData() {
 
         // 将数据传递给处理函数
         handleFlightData(flightData);
+
+        // 调用 example.py 并获取结果
+        try {
+            const response = await fetch('http://127.0.0.1:5000/run-python', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ input: `${flightData.from},${flightData.to}` })
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const result = await response.json();
+
+            // 在右侧版面添加新卡片显示 Python 输出
+            let displayPanel = document.querySelector('.display-panel');
+            if (!displayPanel) {
+                displayPanel = document.createElement('div');
+                displayPanel.classList.add('display-panel');
+                document.body.appendChild(displayPanel);
+                void displayPanel.offsetWidth; // 强制触发重绘
+            }
+
+            displayPanel.innerHTML += `
+                <div class="flight-card">
+                    <h3>Python Output</h3>
+                    <div class="flight-card-content">
+                        <p>${result.output}</p>
+                    </div>
+                </div>
+            `;
+        } catch (error) {
+            console.error('Error calling Python script:', error);
+        }
     });
 }
 
