@@ -166,7 +166,7 @@
     will-change: transform, box-shadow, background-color;
     cursor: pointer;
     user-select: none;
-    width: 30%; /* 设置卡片宽度为父容器的1/3 */
+    width: 32%; /* 设置卡片宽度为父容器的1/3 */
     margin-left: 0; /* 确保卡片靠左对齐 */
     box-sizing: border-box; /* 确保padding不会增加总宽度 */
 }
@@ -369,4 +369,26 @@
 .prob-critical {
   color: #B71C1C; /* 深红色 - 极高风险 > 4.5% */
   font-weight: bold;
+}
+
+
+.flight-card2 {
+  background: rgba(38, 50, 56, 0.2); /* 调整透明度到 0.2 */
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* 卡片阴影 */
+  color: white;
+  margin-bottom: 20px;
+  /* 设置不同状态的过渡时间和缓动函数 */
+  transition: 
+      transform 0.8s cubic-bezier(0.19, 1, 0.22, 1), /* 使用更缓慢的缓动函数 */
+      box-shadow 0.6s cubic-bezier(0.19, 1, 0.22, 1),
+      background-color 0.8s ease-in-out;
+  will-change: transform, box-shadow, background-color;
+  cursor: pointer;
+  user-select: none;
+  width: 30%; /* 设置卡片宽度为父容器的1/3 */
+  margin-left: 33%; /* 设置卡片左边距为33% */
+  /* 设置卡片左边距为33% */
+  box-sizing: border-box; /* 确保padding不会增加总宽度 */
 }
