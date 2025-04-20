@@ -27,31 +27,69 @@ def predict_cancellation():
     try:
         # Get flight data from request
         flight_data = request.json.get('flightData', {})
-        logging.debug(f"Received flight data for prediction: {flight_data}")
+        # logging.debug(f"Received flight data for prediction: {flight_data}") # 调试接收到的航班数据
         
-        # Initialize DISTANCE with default value 1
-        distance = get_airport_distance(flight_data.get('from', ''), flight_data.get('to', ''))
+        # 首先尝试使用前端传递的距离值，如果为0或不存在，则通过函数计算
+        distance = flight_data.get('distance', 0)
+        if distance == 0:
+            # 如果前端传递的距离为0，则通过函数计算
+            distance = get_airport_distance(flight_data.get('from', ''), flight_data.get('to', ''))
+            logging.debug(f"Distance calculated from function: {distance}")
+        else:
+            logging.debug(f"Using distance provided by frontend: {distance}")
+        
+        # 调试和处理航空公司代码
+        airline_code = flight_data.get('airline', '')
+        # 如果航空公司代码为空但是航班号不为空，从航班号中提取航空公司代码
+        if not airline_code and flight_data.get('flightNumber', ''):
+            airline_code = flight_data.get('flightNumber', '')[:2]  # 通常航空公司代码是航班号的前两个字符
+        # 如果还是空，使用默认值
+        if not airline_code:
+            airline_code = "DL"  # 使用Delta航空作为默认值
+        
+        # 获取前端传来的极端天气值
+        extreme_weather = int(flight_data.get('extremeWeather', 0))
+        
+        # 获取前端传来的降雨量值
+        rainfall = float(flight_data.get('rainfall', 0.0))
         
         # Prepare data for prediction with proper data from input form
         prediction_data = {
             "YEAR": int(flight_data.get('year', 2024)),
             "WEEK": int(flight_data.get('week', 1)),
-            "MKT_AIRLINE": flight_data.get('airline', ''),
+            "MKT_AIRLINE": airline_code,
             "ORIGIN_IATA": flight_data.get('from', ''),
             "DEST_IATA": flight_data.get('to', ''),
             "DISTANCE": distance,
-            "DEP_TIME": float(flight_data.get('depTime', 0))
+            "DEP_TIME": float(flight_data.get('depTime', 0)),
+            "EXTREME_WEATHER": extreme_weather,  # 极端天气参数
+            "PRCP": rainfall                     # 降雨量参数
         }
         
-        # Log the actual prediction data for debugging
-        logging.debug(f"Using prediction data: {prediction_data}")
+        logging.debug(f"Time: {float(flight_data.get('depTime', 0))}")
+        # 添加极端天气和降雨量的调试信息
+        logging.debug(f"Extreme Weather: {extreme_weather}")
+        logging.debug(f"Rainfall: {rainfall} mm")
         
-        # Get model path - Fix the path to correctly point to the model
+        # Get model path - 根据输入年份选择对应模型
         current_dir = os.path.dirname(os.path.abspath(__file__))
-        model_path = os.path.normpath(os.path.join(current_dir, "../../models/cancelled_prob/May2021_model.joblib"))
         
-        # Log the path to help with debugging
-        logging.debug(f"Looking for model at: {model_path}")
+        # 获取用户输入的年份
+        input_year = prediction_data["YEAR"]
+        
+        # 可用模型年份列表
+        available_years = [2021, 2022, 2023, 2024]
+        
+        # 如果输入年份在可用模型列表中，直接使用对应年份的模型
+        if input_year in available_years:
+            model_year = input_year
+        else:
+            # 否则找到最接近的年份
+            available_years.sort()  # 确保年份有序
+            model_year = min(available_years, key=lambda x: abs(x - input_year))
+            logging.debug(f"No model for year {input_year}, using closest available model from {model_year}")
+        
+        model_path = os.path.normpath(os.path.join(current_dir, f"../../models/cancelled_prob/May{model_year}_model.joblib"))
         
         # Make prediction
         result = predict_flight_cancellation(model_path, prediction_data)
@@ -66,8 +104,6 @@ def predict_cancellation():
         if 0 <= dep_time < 600:
             is_redeye = 1
         result['model_input']['IS_REDEYE'] = is_redeye
-        result['model_input']['PRCP'] = 0.0  # Default value used
-        result['model_input']['EXTREME_WEATHER'] = 0  # Default value used
         
         return jsonify(result)
     except Exception as e:

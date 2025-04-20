@@ -23,7 +23,7 @@ export function createInputPanel() {
         </div>
         <div class="input-group">
             <label for="flight-number">Flight Number:</label>
-            <input type="text" id="flight-number" placeholder="Flight number (e.g. AA123)" maxlength="10">
+            <input type="text" id="flight-number" placeholder="Flight number (e.g. AA/DL)" maxlength="10">
         </div>
         <button id="search-btn">Search</button>
     `;

@@ -1,10 +1,22 @@
+/* 添加一个根变量设置，用于全局字体大小控制 */
+:root {
+  /* 基础字体大小 - 只需修改这个值就能整体调整字体大小 */
+  --base-font-size: 16px;
+  
+  /* 派生字体大小 - 基于基础字体大小的比例 */
+  --small-font-size: calc(var(--base-font-size) * 0.875);    /* 14px 当基础是16px时 */
+  --medium-font-size: var(--base-font-size);                 /* 16px */
+  --large-font-size: calc(var(--base-font-size) * 1.25);     /* 20px 当基础是16px时 */
+  --xlarge-font-size: calc(var(--base-font-size) * 1.5);     /* 24px 当基础是16px时 */
+}
+
 .input-panel {
     position: fixed;
     left: 0;
     top: 0;
     bottom: 0;
-    background: rgba(38, 50, 56, 0.4); /* 降低背景透明度从 0.8 到 0.4 */
-    backdrop-filter: blur(8px); /* 稍微减小模糊效果以配合更低的透明度 */
+    background: rgba(38, 50, 56, 0.2); /* 降低背景透明度从 0.8 到 0.4 */
+    backdrop-filter: blur(1px); /* 稍微减小模糊效果以配合更低的透明度 */
     color: white;
     width: 320px;
     padding: 40px 20px;
@@ -14,6 +26,7 @@
     flex-direction: column;
     gap: 20px;
     border-radius: 0px; /* 添加圆角 */
+    font-size: var(--medium-font-size); /* 使用变量替代固定字体大小 */
 }
 
 .input-group {
@@ -23,7 +36,7 @@
 .input-group label {
     display: block;
     margin-bottom: 5px;
-    font-size: 14px;
+    font-size: var(--small-font-size); /* 使用变量替代固定字体大小 */
     color: #a0a0a0;
 }
 
@@ -34,7 +47,7 @@
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.1);
     color: white;
-    font-size: 16px;
+    font-size: var(--medium-font-size);
     box-sizing: border-box; /* 添加这行确保padding不会影响总宽度 */
 }
 
@@ -50,7 +63,7 @@
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.1);
     color: white;
-    font-size: 16px;
+    font-size: var(--medium-font-size);
     box-sizing: border-box;
 }
 
@@ -70,7 +83,7 @@
     border: none;
     border-radius: 10px;
     color: white;
-    font-size: 16px;
+    font-size: var(--medium-font-size);
     cursor: pointer;
     transition: background 0.3s;
 }
@@ -99,7 +112,7 @@
 }
 
 .input-panel::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.3);
 }
 
 .display-panel {
@@ -107,8 +120,8 @@
     right: 0;
     top: 0;
     bottom: 0;
-    background: rgba(38, 50, 56, 0.4); /* 与 inputPanel 保持一致 */
-    backdrop-filter: blur(8px);
+    background: rgba(38, 50, 56, 0.2); /* 与 inputPanel 保持一致 */
+    backdrop-filter: blur(1px);
     color: white;
     width: 1268px; /* 增加宽度 */
     padding: 40px 20px;
@@ -128,41 +141,70 @@
 
 .display-panel h3 {
     margin: 0;
-    font-size: 20px;
+    font-size: var(--large-font-size);
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     padding-bottom: 10px;
 }
 
 .display-panel p {
     margin: 10px 0;
-    font-size: 16px;
+    font-size: var(--medium-font-size);
 }
 
 .flight-card {
-    background: rgba(38, 50, 56, 0.45); /* 调整透明度到 0.45 */
+    background: rgba(38, 50, 56, 0.2); /* 调整透明度到 0.2 */
     border-radius: 20px;
     padding: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* 卡片阴影 */
     color: white;
     margin-bottom: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* 设置不同状态的过渡时间和缓动函数 */
+    transition: 
+        transform 0.8s cubic-bezier(0.19, 1, 0.22, 1), /* 使用更缓慢的缓动函数 */
+        box-shadow 0.6s cubic-bezier(0.19, 1, 0.22, 1),
+        background-color 0.8s ease-in-out;
+    will-change: transform, box-shadow, background-color;
+    cursor: pointer;
+    user-select: none;
+    width: 30%; /* 设置卡片宽度为父容器的1/3 */
+    margin-left: 0; /* 确保卡片靠左对齐 */
+    box-sizing: border-box; /* 确保padding不会增加总宽度 */
 }
 
 .flight-card:hover {
-    transform: translateY(-5px); /* 悬停时上移效果 */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* 悬停时阴影增强 */
+    transform: translateY(-4px); /* 上浮距离 */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25), 0 8px 10px rgba(0, 0, 0, 0.15); /* 更精细的阴影效果 */
+    background: rgba(117, 187, 221, 0.15); /* 稍微调整悬停时的背景色 */
+    /* 悬停时使用较慢的过渡 */
+    transition: 
+        transform 2.2s cubic-bezier(0.19, 1, 0.22, 1), /* 上浮时更慢的过渡 */
+        box-shadow 1.8s cubic-bezier(0.19, 1, 0.22, 1),
+        background-color 2s ease-in-out;
 }
 
-.flight-card h3 {
+.flight-card:active {
+    transform: translateY(4px);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    /* 点击时使用快速过渡 */
+    transition: 
+        transform 0.2s cubic-bezier(0.19, 1, 0.22, 1),
+        box-shadow 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.flight-card-content {
+    transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.fight-card h3 {
     margin: 0 0 10px;
-    font-size: 18px;
+    font-size: var(--large-font-size);
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     padding-bottom: 10px;
 }
 
 .flight-card-content p {
     margin: 5px 0;
-    font-size: 14px;
+    font-size: var(--medium-font-size);
     line-height: 1.5;
 }
 
@@ -183,7 +225,7 @@
       gap: 12px;
       border-radius: 20px 20px 0 0; /* 只圆角上方 */
       box-shadow: 0 -2px 15px rgba(0,0,0,0.3); /* 阴影在上方 */
-      backdrop-filter: blur(4px); /* 减少模糊强度 */
+      backdrop-filter: blur(1px); /* 减少模糊强度 */
       transform: translateY(100%); /* 初始隐藏 */
       transition: transform 0.3s ease;
     }
@@ -199,12 +241,12 @@
     .input-group input, 
     #flight-number {
       padding: 12px; /* 增大点击区域 */
-      font-size: 14px;
+      font-size: var(--small-font-size);
     }
     
     #search-btn {
       padding: 12px;
-      font-size: 16px;
+      font-size: var(--medium-font-size);
     }
   }
 
@@ -233,11 +275,11 @@
     }
     
     .flight-card h3 {
-      font-size: 16px;
+      font-size: var(--medium-font-size);
     }
     
     .flight-card-content p {
-      font-size: 13px;
+      font-size: var(--small-font-size);
     }
   }
 

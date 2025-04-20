@@ -1,11 +1,80 @@
 export function collectFlightData() {
+    // 首先检查是否已经存在极端天气按钮和降雨量滑块
+    const panel = document.querySelector('.input-panel');
+    
+    // 添加极端天气按钮
+    if (panel && !document.getElementById('extreme-weather')) {
+        const weatherFormGroup = document.createElement('div');
+        weatherFormGroup.className = 'form-group';
+        weatherFormGroup.innerHTML = `
+            <label class="weather-toggle">
+                <input type="checkbox" id="extreme-weather">
+                <span class="weather-toggle-slider"></span>
+                <span class="weather-toggle-label">Extreme Weather</span>
+            </label>
+        `;
+        
+        // 将按钮添加到搜索按钮之前
+        const searchBtn = document.querySelector('#search-btn');
+        if (searchBtn) {
+            panel.insertBefore(weatherFormGroup, searchBtn);
+        } else {
+            panel.appendChild(weatherFormGroup);
+        }
+    }
+    
+    // 添加降雨量滑块
+    if (panel && !document.getElementById('rainfall-slider')) {
+        const rainfallFormGroup = document.createElement('div');
+        rainfallFormGroup.className = 'form-group rainfall-slider-container';
+        rainfallFormGroup.innerHTML = `
+            <label for="rainfall-slider"> Precipitaion (0-500 mm):</label>
+            <div class="rainfall-slider-wrapper">
+                <input type="range" id="rainfall-slider" class="rainfall-slider" min="0" max="500" value="0" step="1">
+                <span id="rainfall-value" class="rainfall-slider-value">0 mm</span>
+            </div>
+        `;
+        
+        // 将滑块添加到搜索按钮之前
+        const searchBtn = document.querySelector('#search-btn');
+        if (searchBtn) {
+            panel.insertBefore(rainfallFormGroup, searchBtn);
+            
+            // 添加滑块值更新事件
+            const rainfallSlider = document.getElementById('rainfall-slider');
+            const rainfallValue = document.getElementById('rainfall-value');
+            
+            if (rainfallSlider && rainfallValue) {
+                rainfallSlider.addEventListener('input', function() {
+                    rainfallValue.textContent = this.value + ' mm';
+                });
+            }
+        } else {
+            panel.appendChild(rainfallFormGroup);
+        }
+    }
+
     const fromInput = document.querySelector('#from');
     const toInput = document.querySelector('#to');
     const timeInput = document.querySelector('#time');
     const flightNumberInput = document.querySelector('#flight-number');
     const searchButton = document.querySelector('#search-btn');
 
-    searchButton.addEventListener('click', async () => {
+    // 清除可能的旧事件监听器
+    const newSearchBtn = searchButton.cloneNode(true);
+    if (searchButton.parentNode) {
+        searchButton.parentNode.replaceChild(newSearchBtn, searchButton);
+    }
+
+    newSearchBtn.addEventListener('click', async () => {
+        // 获取极端天气选择状态
+        const extremeWeatherInput = document.querySelector('#extreme-weather');
+        const extremeWeather = extremeWeatherInput ? extremeWeatherInput.checked ? 1 : 0 : 0;
+        
+        // 获取降雨量值
+        const rainfallSlider = document.querySelector('#rainfall-slider');
+        const rainfall = rainfallSlider ? parseFloat(rainfallSlider.value) : 0;
+        
         // Get the input values
         const from = fromInput.value.trim().toUpperCase();
         const to = toInput.value.trim().toUpperCase();
@@ -48,7 +117,9 @@ export function collectFlightData() {
             depTime,
             year,
             week,
-            distance
+            distance,
+            extremeWeather, // 添加极端天气参数
+            rainfall       // 添加降雨量参数
         };
 
         // 将数据传递给处理函数
@@ -77,6 +148,8 @@ export function collectFlightData() {
                 void displayPanel.offsetWidth; // 强制触发重绘
             }
 
+            // 注释掉第一张卡片的显示代码
+            /*
             displayPanel.innerHTML += `
                 <div class="flight-card">
                     <h3>Python Output</h3>
@@ -85,6 +158,7 @@ export function collectFlightData() {
                     </div>
                 </div>
             `;
+            */
             
             // Call predict-cancellation endpoint
             const predictionResponse = await fetch('http://127.0.0.1:5000/predict-cancellation', {
@@ -99,13 +173,15 @@ export function collectFlightData() {
 
             const predictionResult = await predictionResponse.json();
             
-            // Display cancellation probability results
+            // Display cancellation probability results - 保持第二张卡片不变
             displayPanel.innerHTML += `
                 <div class="flight-card">
                     <h3>Flight Cancellation Prediction</h3>
                     <div class="flight-card-content">
                         <p><strong>Cancellation Probability:</strong> ${(predictionResult.cancellation_probability * 100).toFixed(2)}%</p>
                         <p><strong>Red-eye Flight:</strong> ${predictionResult.is_redeye ? "Yes" : "No"}</p>
+                        <p><strong>Extreme Weather:</strong> ${predictionResult.model_input?.EXTREME_WEATHER ? "Yes" : "No"}</p>
+                        <p><strong>Rainfall:</strong> ${predictionResult.model_input?.PRCP} mm</p>
                         ${predictionResult.error ? `<p class="error"><strong>Error:</strong> ${predictionResult.error}</p>` : ''}
                         
                         <h4>Input Data Sent to Model:</h4>
@@ -156,20 +232,22 @@ function handleFlightData(flightData) {
         void displayPanel.offsetWidth;
     }
 
-    // 清空内容并添加新的航班信息卡片
-    displayPanel.innerHTML = `
-        <div class="flight-card">
-            <h3>Flight Information</h3>
-            <div class="flight-card-content">
-                <p><strong>From:</strong> ${flightData.from}</p>
-                <p><strong>To:</strong> ${flightData.to}</p>
-                <p><strong>Time:</strong> ${flightData.time}</p>
-                <p><strong>Flight Number:</strong> ${flightData.flightNumber}</p>
-                <p><strong>Airline:</strong> ${flightData.airline}</p>
-                <p><strong>Distance:</strong> ~${flightData.distance} miles</p>
-            </div>
-        </div>
-    `;
+    // // 清空内容并添加新的航班信息卡片
+    // displayPanel.innerHTML = `
+    //     <div class="flight-card">
+    //         <h3>Flight Information</h3>
+    //         <div class="flight-card-content">
+    //             <p><strong>From:</strong> ${flightData.from}</p>
+    //             <p><strong>To:</strong> ${flightData.to}</p>
+    //             <p><strong>Time:</strong> ${flightData.time}</p>
+    //             <p><strong>Flight Number:</strong> ${flightData.flightNumber}</p>
+    //             <p><strong>Airline:</strong> ${flightData.airline}</p>
+    //             <p><strong>Distance:</strong> ~${flightData.distance} miles</p>
+    //             <p><strong>Extreme Weather:</strong> ${flightData.extremeWeather ? "Yes" : "No"}</p>
+    //             <p><strong>Rainfall:</strong> ${flightData.rainfall} mm</p>
+    //         </div>
+    //     </div>
+    // `;
 
     // 添加显示动画
     displayPanel.classList.add('visible');

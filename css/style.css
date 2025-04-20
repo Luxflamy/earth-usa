@@ -156,3 +156,123 @@ canvas {
     background-color: inherit;
     border-radius: 0 10px 0 0;
 }
+
+/* 极端天气选择按钮样式 */
+.weather-toggle {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    cursor: pointer;
+    user-select: none;
+}
+
+.weather-toggle input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.weather-toggle-slider {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 22px;
+    background-color: #555;
+    border-radius: 22px;
+    margin-right: 10px;
+    transition: 0.4s;
+}
+
+.weather-toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+.weather-toggle input:checked + .weather-toggle-slider {
+    background-color: #2596be;
+}
+
+.weather-toggle input:checked + .weather-toggle-slider:before {
+    transform: translateX(18px);
+}
+
+.weather-toggle-label {
+    color: #fff;
+    font-size: 14px;
+}
+
+/* 降雨量滑块样式 */
+.rainfall-slider-container {
+    margin: 15px 0;
+}
+
+.rainfall-slider-container label {
+    display: block;
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.rainfall-slider-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.rainfall-slider {
+    -webkit-appearance: none;
+    width: 80%;
+    height: 6px;
+    border-radius: 3px;
+    background: #555;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.rainfall-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #2596be;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.rainfall-slider::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #2596be;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.rainfall-slider:hover {
+    opacity: 1;
+}
+
+.rainfall-slider::-webkit-slider-thumb:hover,
+.rainfall-slider::-webkit-slider-thumb:active {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(37, 150, 190, 0.5);
+}
+
+.rainfall-slider-value {
+    color: #fff;
+    margin-left: 10px;
+    min-width: 35px;
+    font-size: 14px;
+}
