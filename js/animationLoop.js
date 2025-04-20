@@ -2,7 +2,7 @@ import { updateDust } from './dustEffect.js';
 import { updateZoom } from './eventHandlers.js';
 
 let rotationDirection = 1; // 自转方向，1 表示顺时针，-1 表示逆时针
-const ROTATION_LIMIT = Math.PI / 40; // 限制范围
+const ROTATION_LIMIT = Math.PI / 30; // 限制范围
 
 export function animate(renderer, scene, camera, earth, particles, globalRotation, targetRotation, currentRotation, ROTATION_SPEED) {
     requestAnimationFrame(() => animate(renderer, scene, camera, earth, particles, globalRotation, targetRotation, currentRotation, ROTATION_SPEED));

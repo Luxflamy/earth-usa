@@ -1,8 +1,7 @@
 import joblib
 import pandas as pd
 import numpy as np
-import os
-import csv
+
 
 def predict_flight_cancellation(model_path, flight_data):
     """
@@ -122,79 +121,3 @@ def predict_flight_cancellation(model_path, flight_data):
     except Exception as e:
         return {"error": f"Prediction failed: {str(e)}"}
 
-
-# # Example usage:
-# if __name__ == "__main__":
-#     # Example flight data with updated WEEK value (1 = Monday in new system)
-#     flight = {
-#         "YEAR": 2021,
-#         "WEEK": 1,  # Monday (0=Sunday, 1=Monday, 2=Tuesday, etc.)
-#         "MKT_AIRLINE": "WN",
-#         "ORIGIN_IATA": "ATL",
-#         "DEST_IATA": "LAX",
-#         "DISTANCE": 1946.0,
-#         "DEP_TIME": 530,  # 5:30 AM
-#     }
-
-#     # Path to the saved model
-#     model_path = "./cancelled_prob_rf_models/May2021_model.joblib"
-
-#     # Make prediction
-#     result = predict_flight_cancellation(model_path, flight)
-#     print(result)
-
-#     # Example of a weekend evening flight
-#     weekend_flight = {
-#         "YEAR": 2021,
-#         "WEEK": 0,  # Sun
-#         "MKT_AIRLINE": "DL",
-#         "ORIGIN_IATA": "DFW",
-#         "DEST_IATA": "LGA",
-#         "DISTANCE": 1389.0,
-#         "DEP_TIME": 1730,  # 5:30 PM (evening peak)
-#     }
-
-#     # Make prediction for weekend flight
-#     weekend_result = predict_flight_cancellation(model_path, weekend_flight)
-#     print("\nWeekend Evening Flight:")
-#     print(weekend_result)
-
-#     # Example of a weekday morning peak flight
-#     morning_flight = {
-#         "YEAR": 2021,
-#         "WEEK": 3,  # Wednesday
-#         "MKT_AIRLINE": "AA",
-#         "ORIGIN_IATA": "ORD",
-#         "DEST_IATA": "SFO",
-#         "DISTANCE": 1846.0,
-#         "DEP_TIME": 830,  # 8:30 AM (morning peak)
-#     }
-
-#     # Make prediction for morning peak flight
-#     morning_result = predict_flight_cancellation(model_path, morning_flight)
-#     print("\nWeekday Morning Peak Flight:")
-#     print(morning_result)
-
-
-def get_airport_distance(origin, destination):
-    """
-    Reads the distance between two airports from the CSV file.
-
-    Parameters:
-    origin (str): Origin airport IATA code.
-    destination (str): Destination airport IATA code.
-
-    Returns:
-    float: Distance in miles, or 1 if not found.
-    """
-    csv_path = os.path.normpath(os.path.join(os.path.dirname(__file__), "../../models/top30_airport_distances.csv"))
-    try:
-        with open(csv_path, mode='r') as file:
-            reader = csv.DictReader(file)
-            for row in reader:
-                if (row['Origin'] == origin and row['Destination'] == destination) or \
-                   (row['Origin'] == destination and row['Destination'] == origin):
-                    return float(row['Distance']) if row['Distance'] else 1.0
-    except Exception as e:
-        return 1.0
-    return 1.0

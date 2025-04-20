@@ -177,8 +177,8 @@
     background: rgba(117, 187, 221, 0.15); /* 稍微调整悬停时的背景色 */
     /* 悬停时使用较慢的过渡 */
     transition: 
-        transform 2.2s cubic-bezier(0.19, 1, 0.22, 1), /* 上浮时更慢的过渡 */
-        box-shadow 1.8s cubic-bezier(0.19, 1, 0.22, 1),
+        transform 2s cubic-bezier(0.19, 1, 0.22, 1), /* 上浮时更快的过渡 */
+        box-shadow 2.8s cubic-bezier(0.19, 1, 0.22, 1),
         background-color 2s ease-in-out;
 }
 
@@ -206,6 +206,42 @@
     margin: 5px 0;
     font-size: var(--medium-font-size);
     line-height: 1.5;
+}
+
+/* 卡片详情展开样式 */
+.flight-card-details {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 10px;
+    font-size: var(--small-font-size);
+    transition: max-height 0.6s cubic-bezier(0.19, 1, 0.22, 1),
+                padding 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    overflow: hidden;
+}
+
+.flight-card-details h4 {
+    font-size: var(--medium-font-size);
+    margin: 15px 0 10px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.expand-indicator {
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.6);
+    transition: color 0.3s ease;
+}
+
+.expand-indicator:hover {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.model-input-data {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px 15px;
+}
+
+.model-input-data p {
+    margin: 3px 0;
 }
 
 /* 移动端 */
@@ -313,3 +349,24 @@
       transform: translate(-50%, -50%);
     }
   }
+
+/* 取消概率颜色样式 */
+.prob-low {
+  color: #4CAF50; /* 绿色 - 低风险 <= 1.5% */
+  font-weight: bold;
+}
+
+.prob-medium {
+  color: #FF9800; /* 橙色 - 中风险 1.5% < x <= 2.5% */
+  font-weight: bold;
+}
+
+.prob-high {
+  color: #FF5252; /* 浅红色 - 高风险 2.5% < x <= 4.5% */
+  font-weight: bold;
+}
+
+.prob-critical {
+  color: #B71C1C; /* 深红色 - 极高风险 > 4.5% */
+  font-weight: bold;
+}

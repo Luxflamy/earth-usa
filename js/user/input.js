@@ -1,3 +1,6 @@
+// 添加一个全局变量来跟踪卡片展开状态
+let isCardExpanded = false;
+
 export function collectFlightData() {
     // 首先检查是否已经存在极端天气按钮和降雨量滑块
     const panel = document.querySelector('.input-panel');
@@ -28,9 +31,9 @@ export function collectFlightData() {
         const rainfallFormGroup = document.createElement('div');
         rainfallFormGroup.className = 'form-group rainfall-slider-container';
         rainfallFormGroup.innerHTML = `
-            <label for="rainfall-slider"> Precipitaion (0-500 mm):</label>
+            <label for="rainfall-slider"> Precipitaion (0-200 mm):</label>
             <div class="rainfall-slider-wrapper">
-                <input type="range" id="rainfall-slider" class="rainfall-slider" min="0" max="500" value="0" step="1">
+                <input type="range" id="rainfall-slider" class="rainfall-slider" min="0" max="200" value="0" step="1">
                 <span id="rainfall-value" class="rainfall-slider-value">0 mm</span>
             </div>
         `;
@@ -145,7 +148,22 @@ export function collectFlightData() {
                 displayPanel = document.createElement('div');
                 displayPanel.classList.add('display-panel');
                 document.body.appendChild(displayPanel);
+                
+                // 添加水平排列样式
+                displayPanel.style.display = 'flex';
+                displayPanel.style.flexWrap = 'wrap';
+                displayPanel.style.justifyContent = 'space-between';
+                displayPanel.style.alignItems = 'flex-start';
+                displayPanel.style.gap = '20px';
+                
                 void displayPanel.offsetWidth; // 强制触发重绘
+            } else {
+                // 确保已存在的面板也有横向排布样式
+                displayPanel.style.display = 'flex';
+                displayPanel.style.flexWrap = 'wrap';
+                displayPanel.style.justifyContent = 'space-between';
+                displayPanel.style.alignItems = 'flex-start';
+                displayPanel.style.gap = '20px';
             }
 
             // 注释掉第一张卡片的显示代码
@@ -173,17 +191,100 @@ export function collectFlightData() {
 
             const predictionResult = await predictionResponse.json();
             
-            // Display cancellation probability results - 保持第二张卡片不变
-            displayPanel.innerHTML += `
-                <div class="flight-card">
-                    <h3>Flight Cancellation Prediction</h3>
+            // 保存当前卡片的展开状态（如果之前有卡片的话）
+            const existingDetails = document.querySelector('.flight-card-details');
+            if (existingDetails) {
+                isCardExpanded = existingDetails.style.display !== 'none' && 
+                                existingDetails.style.maxHeight !== '0px';
+            }
+
+            // 根据展开状态确定初始样式
+            const detailsInitialStyle = isCardExpanded 
+                ? 'display: block; overflow: hidden; max-height: 1000px; padding: 10px 0 0 0;' 
+                : 'display: none; overflow: hidden; max-height: 0; padding: 0;';
+            
+            const indicatorInitialText = isCardExpanded ? '▲ Hide details' : '▼ Show details';
+            
+            // 根据取消概率设置颜色和风险描述
+            const cancelProb = predictionResult.cancellation_probability * 100;
+            let probColor;
+            let riskLevel;
+            
+            if (cancelProb <= 2.1) {
+                probColor = '#4CAF50'; // 绿色
+                riskLevel = "Safe";
+            } else if (cancelProb <= 3) {
+                probColor = '#FF9800'; // 橙色
+                riskLevel = "At Risk";
+            } else if (cancelProb <= 5) {
+                probColor = '#FF5252'; // 浅红色
+                riskLevel = "High Risk";
+            } else {
+                probColor = '#B71C1C'; // 深红色
+                riskLevel = "Extreme Risk";
+            }
+
+            // 为红眼航班和非红眼航班添加emoji
+            // const redEyeEmoji = predictionResult.is_redeye ? "🌙 ✈️ 😴" : "☀️ ✈️ 😊";
+            const redEyeEmoji = predictionResult.is_redeye ? "🌙 ✈️ 😴" : "☀️";
+
+            // 格式化时间为更日常化的显示
+            let formattedTime = "Time not specified";
+            if (flightData.time) {
+                const date = new Date(flightData.time);
+                const hours = date.getHours();
+                const minutes = date.getMinutes();
+                const ampm = hours >= 12 ? 'PM' : 'AM';
+                const hour12 = hours % 12 || 12;
+                formattedTime = `${hour12}:${minutes < 10 ? '0' + minutes : minutes} ${ampm}`;
+            }
+
+            // 检查起点和终点是否存在
+            const hasOriginDest = flightData.from && flightData.to && flightData.from !== '' && flightData.to !== '';
+            
+            // 计算大致飞行时间（假设平均飞行速度为500英里/小时）
+            const distance = hasOriginDest ? (predictionResult.model_input?.DISTANCE || 0) : 0;
+            const flightHours = Math.floor(distance / 500);
+            const flightMinutes = Math.round((distance / 500 - flightHours) * 60);
+            const flightTimeText = !hasOriginDest ? "Data unavailable" : (
+                flightHours > 0 
+                ? `approx. ${flightHours} hour${flightHours > 1 ? 's' : ''}${flightMinutes > 0 ? ' ' + flightMinutes + ' min' : ''}`
+                : `approx. ${flightMinutes} min`
+            );
+
+            // 检查是否有足够的数据来显示取消概率
+            const canShowCancelProb = hasOriginDest;
+            const cancelProbDisplay = canShowCancelProb 
+                ? `<span style="color: ${probColor}; font-weight: bold;">${cancelProb.toFixed(2)}%</span>
+                   <span style="color: ${probColor}; font-weight: bold; margin-left: auto;">${riskLevel}</span>`
+                : `<span style="color: #888; font-style: italic;">Data unavailable</span>`;
+            
+            // 检查是否可以确定红眼航班状态
+            const canShowRedEye = flightData.time && flightData.time !== '';
+            const redEyeDisplay = canShowRedEye
+                ? `${predictionResult.is_redeye ? "Yes" : "No"}<span style="margin-left: auto;">${redEyeEmoji}</span>`
+                : `<span style="color: #888; font-style: italic;">Data unavailable</span>`;
+
+            // Display cancellation probability results
+            displayPanel.innerHTML = `
+                <div class="flight-card" style="flex: 1; min-width: 300px; max-width: calc(50% - 10px);">
+                    <h3>Cancellation Prediction</h3>
                     <div class="flight-card-content">
-                        <p><strong>Cancellation Probability:</strong> ${(predictionResult.cancellation_probability * 100).toFixed(2)}%</p>
-                        <p><strong>Red-eye Flight:</strong> ${predictionResult.is_redeye ? "Yes" : "No"}</p>
+                        <p style="display: flex; justify-content: space-between; align-items: center;">
+                            <strong>Cancellation Probability:</strong>&nbsp;&nbsp;
+                            ${cancelProbDisplay}
+                        </p>
+                        <p style="display: flex; justify-content: space-between; align-items: center;">
+                            <strong>Red-eye Flight:</strong> ${redEyeDisplay}
+                        </p>
+                        <p><strong>Departure Time:</strong> ${formattedTime}</p>
+                        <p><strong>Distance:</strong> ${hasOriginDest ? `${distance} miles` : "Data unavailable"}</p>
+                        <p><strong>Est. Flight Duration:</strong> ${flightTimeText}</p>
+                    </div>
+                    <div class="flight-card-details" style="${detailsInitialStyle} transition: max-height 0.6s ease-in-out, padding 0.6s ease-in-out;">
                         <p><strong>Extreme Weather:</strong> ${predictionResult.model_input?.EXTREME_WEATHER ? "Yes" : "No"}</p>
                         <p><strong>Rainfall:</strong> ${predictionResult.model_input?.PRCP} mm</p>
                         ${predictionResult.error ? `<p class="error"><strong>Error:</strong> ${predictionResult.error}</p>` : ''}
-                        
                         <h4>Input Data Sent to Model:</h4>
                         <div class="model-input-data">
                             <p><strong>YEAR:</strong> ${predictionResult.model_input?.YEAR || flightData.year}</p>
@@ -198,15 +299,105 @@ export function collectFlightData() {
                             <p><strong>EXTREME_WEATHER:</strong> ${predictionResult.model_input?.EXTREME_WEATHER !== undefined ? predictionResult.model_input.EXTREME_WEATHER : '0 (default)'}</p>
                         </div>
                     </div>
+                    <div class="expand-indicator" style="text-align: center; cursor: pointer; padding: 5px 0; font-size: 12px;">
+                        <span>${indicatorInitialText}</span>
+                    </div>
+                </div>
+                
+                <!-- 添加新卡片 -->
+                <div class="flight-card travel-tips-card" style="flex: 1; min-width: 300px; max-width: calc(50% - 10px);">
+                    <h3>Travel Tips</h3>
+                    <div class="flight-card-content">
+                        ${cancelProb > 3 ? 
+                            `<div class="travel-alert">
+                                <p><strong>⚠️ High Cancellation Risk Alert</strong></p>
+                                <p>Based on our prediction, this flight has an elevated risk of cancellation.</p>
+                            </div>` : ''
+                        }
+                        <h4>Recommended Actions:</h4>
+                        <ul>
+                            ${hasOriginDest ? 
+                                `<li>Arrive at ${flightData.from} airport at least ${distance > 1000 ? '3' : '2'} hours before departure.</li>` : 
+                                '<li>Arrive at the airport with plenty of time before departure.</li>'
+                            }
+                            <li>Download the airline's app for real-time flight updates.</li>
+                            ${predictionResult.model_input?.EXTREME_WEATHER ? 
+                                '<li><strong>Weather Warning:</strong> Check airport conditions due to forecasted extreme weather.</li>' : 
+                                '<li>Monitor current weather conditions at departure and arrival cities.</li>'
+                            }
+                            ${predictionResult.model_input?.PRCP > 50 ? 
+                                '<li><strong>Precipitation Alert:</strong> Heavy rainfall may cause delays. Consider flexibility in your travel plans.</li>' : 
+                                ''
+                            }
+                            ${predictionResult.is_redeye ? 
+                                '<li>For this red-eye flight, consider bringing items for comfort (neck pillow, eye mask, etc).</li>' : 
+                                ''
+                            }
+                        </ul>
+                        
+                        <h4>Alternative Options:</h4>
+                        <ul>
+                            ${cancelProb > 4 ? 
+                                '<li><strong>Consider booking a backup flight</strong> if your travel is time-sensitive.</li>' : 
+                                ''
+                            }
+                            <li>Check refund and rebooking policies for your ticket.</li>
+                            <li>Consider travel insurance for important trips.</li>
+                        </ul>
+                    </div>
                 </div>
             `;
+
+            // 添加点击事件来展开/收起详情
+            const flightCard = displayPanel.querySelector('.flight-card');
+            const detailsSection = displayPanel.querySelector('.flight-card-details');
+            const expandIndicator = displayPanel.querySelector('.expand-indicator');
+            
+            expandIndicator.addEventListener('click', (e) => {
+                e.stopPropagation(); // 防止触发卡片的点击事件
+                toggleDetails();
+            });
+            
+            flightCard.addEventListener('click', (e) => {
+                // 如果点击的是扩展指示器，则不重复执行
+                if (e.target.closest('.expand-indicator')) return;
+                toggleDetails();
+            });
+            
+            function toggleDetails() {
+                isCardExpanded = !isCardExpanded;
+                updateCardExpandState();
+            }
+            
+            function updateCardExpandState() {
+                if (isCardExpanded) {
+                    // 展开
+                    detailsSection.style.display = 'block';
+                    // 强制重绘以使过渡生效
+                    void detailsSection.offsetHeight;
+                    detailsSection.style.maxHeight = '1000px'; // 设置一个足够大的值
+                    detailsSection.style.padding = '10px 0 0 0';
+                    expandIndicator.innerHTML = '<span>▲ Hide details</span>';
+                } else {
+                    // 收起
+                    detailsSection.style.maxHeight = '0';
+                    detailsSection.style.padding = '0';
+                    expandIndicator.innerHTML = '<span>▼ Show details</span>';
+                    // 延迟设置display:none以便动画完成
+                    setTimeout(() => {
+                        detailsSection.style.display = 'none';
+                    }, 600);
+                }
+            }
+
         } catch (error) {
             console.error('Error calling Python script:', error);
             // Display error message
             let displayPanel = document.querySelector('.display-panel');
             if (displayPanel) {
+                // 确保错误卡片也适应横向布局
                 displayPanel.innerHTML += `
-                    <div class="flight-card error-card">
+                    <div class="flight-card error-card" style="flex: 1; min-width: 300px; max-width: 100%;">
                         <h3>Error</h3>
                         <div class="flight-card-content">
                             <p>${error.message}</p>
@@ -226,28 +417,19 @@ function handleFlightData(flightData) {
     if (!displayPanel) {
         displayPanel = document.createElement('div');
         displayPanel.classList.add('display-panel');
+        
+        // 添加水平排列样式
+        displayPanel.style.display = 'flex';
+        displayPanel.style.flexWrap = 'wrap';
+        displayPanel.style.justifyContent = 'space-between';
+        displayPanel.style.alignItems = 'flex-start';
+        displayPanel.style.gap = '20px';
+        
         document.body.appendChild(displayPanel);
 
         // 强制触发重绘以确保动画生效
         void displayPanel.offsetWidth;
     }
-
-    // // 清空内容并添加新的航班信息卡片
-    // displayPanel.innerHTML = `
-    //     <div class="flight-card">
-    //         <h3>Flight Information</h3>
-    //         <div class="flight-card-content">
-    //             <p><strong>From:</strong> ${flightData.from}</p>
-    //             <p><strong>To:</strong> ${flightData.to}</p>
-    //             <p><strong>Time:</strong> ${flightData.time}</p>
-    //             <p><strong>Flight Number:</strong> ${flightData.flightNumber}</p>
-    //             <p><strong>Airline:</strong> ${flightData.airline}</p>
-    //             <p><strong>Distance:</strong> ~${flightData.distance} miles</p>
-    //             <p><strong>Extreme Weather:</strong> ${flightData.extremeWeather ? "Yes" : "No"}</p>
-    //             <p><strong>Rainfall:</strong> ${flightData.rainfall} mm</p>
-    //         </div>
-    //     </div>
-    // `;
 
     // 添加显示动画
     displayPanel.classList.add('visible');
