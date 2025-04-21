@@ -110,8 +110,7 @@ def predict_flight_cancellation(model_path, flight_data):
     # Make prediction
     try:
         # Get probability of cancellation (class 1)
-        # cancellation_prob = model.predict_proba(X)[0, 1]
-        cancellation_prob = model.predict(X)[0]
+        cancellation_prob = model.predict_proba(X)[0, 1]
 
         return {
             "cancellation_probability": float(cancellation_prob),
