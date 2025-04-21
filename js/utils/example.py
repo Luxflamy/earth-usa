@@ -57,6 +57,9 @@ def predict_cancellation():
         
         # 获取日期信息
         year = int(flight_data.get('year', 2024))
+        # 如果年份超过2024，使用2024作为默认值
+        if year > 2024:
+            year = 2024
         month = 1  # 默认值，如果前端没有提供月份信息
         day = 1    # 默认值，如果前端没有提供日期信息
         
