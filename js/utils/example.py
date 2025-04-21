@@ -5,6 +5,7 @@ import os
 import pandas as pd
 from pred_cancelled_prob import predict_flight_cancellation, get_airport_distance
 from pred_dep_delay import predict_delay
+from pred_arr_delay import predict_arrival_delay
 
 app = Flask(__name__)
 CORS(app)  # 启用跨域支持
@@ -146,6 +147,56 @@ def predict_cancellation():
             logging.debug(f"预测延误: {result['predicted_delay_minutes']:.1f} 分钟")
             logging.debug(f"延误置信区间: [{result['delay_confidence_interval']['lower']:.1f}, {result['delay_confidence_interval']['upper']:.1f}] 分钟")
             
+            # 获取到达延迟预测
+            try:
+                # 准备到达延迟预测的输入数据
+                arr_delay_input = {
+                    'SCH_DEP_TIME': float(prediction_data.get('DEP_TIME', 0)),
+                    'ORIGIN_IATA': prediction_data['ORIGIN_IATA'],
+                    'DEST_IATA': prediction_data['DEST_IATA'],
+                    'DISTANCE': distance,
+                    'PRCP': rainfall,
+                    'MONTH': month,
+                    'DAY': day,
+                    'YEAR': year,
+                    'MKT_AIRLINE': airline_code,
+                    'EXTREME_WEATHER': extreme_weather,
+                    'WEEK': prediction_data['WEEK'],
+                    'DEP_DELAY': float(delay_times[0][0])  # 使用预测的出发延迟作为输入
+                }
+                
+                # 获取模型路径
+                arr_delay_model_dir = os.path.normpath(os.path.join(current_dir, "../../models/arr_delay_rf_models"))
+                
+                # 调用到达延迟预测函数
+                arr_delay_result = predict_arrival_delay(arr_delay_model_dir, arr_delay_input, year=model_year)
+                
+                # 将到达延迟预测添加到结果中
+                if "error" not in arr_delay_result:
+                    result['arrival_delay'] = {
+                        'predicted': arr_delay_result['delay_predicted'],
+                        'probability': float(arr_delay_result['delay_probability']),
+                        'minutes': float(arr_delay_result['delay_minutes']),
+                        'confidence_interval': {
+                            'lower': float(arr_delay_result['delay_lower_bound']),
+                            'upper': float(arr_delay_result['delay_upper_bound'])
+                        },
+                        'is_weekend': arr_delay_result['is_weekend'],
+                        'is_late_night_arrival': arr_delay_result['is_late_night_arrival'],
+                        'is_morning_rush': arr_delay_result['is_morning_rush'],
+                        'is_evening_rush': arr_delay_result['is_evening_rush']
+                    }
+                    logging.debug(f"到达延迟概率: {result['arrival_delay']['probability']:.4f}")
+                    logging.debug(f"预测到达延迟: {result['arrival_delay']['minutes']:.1f} 分钟")
+                    logging.debug(f"到达延迟置信区间: [{result['arrival_delay']['confidence_interval']['lower']:.1f}, {result['arrival_delay']['confidence_interval']['upper']:.1f}] 分钟")
+                else:
+                    logging.warning(f"到达延迟预测错误: {arr_delay_result['error']}")
+                    result['arrival_delay_error'] = arr_delay_result['error']
+                
+            except Exception as e:
+                logging.error(f"到达延迟预测错误: {e}")
+                result['arrival_delay_error'] = str(e)
+            
         except Exception as e:
             logging.error(f"延误预测错误: {e}")
             result['delay_error'] = str(e)
@@ -157,3 +208,4 @@ def predict_cancellation():
 
 if __name__ == '__main__':
     app.run(debug=True)
+

@@ -172,11 +172,71 @@ function displayPredictionResult(flightData, predictionResult, displayPanel) {
         ? `<span style="color: #666;">[${Math.round(predictionResult.delay_confidence_interval.lower)}-${Math.round(predictionResult.delay_confidence_interval.upper)} mins]</span>`
         : '';
 
+    // 处理到达延迟预测显示
+    const hasArrivalDelayPrediction = predictionResult.arrival_delay !== undefined && 
+                                     predictionResult.arrival_delay.probability !== undefined && 
+                                     predictionResult.arrival_delay.minutes !== undefined;
+    
+    // 根据到达延迟概率和预测延迟时间设置颜色和文本
+    let arrDelayColor = '#4CAF50'; // 默认绿色
+    let arrDelayStatus = "On Time";
+    let isEarlyArrival = false;
+    
+    if (hasArrivalDelayPrediction) {
+        const arrDelayProb = predictionResult.arrival_delay.probability * 100;
+        const arrDelayMinutes = predictionResult.arrival_delay.minutes;
+        
+        // 检查是否为负数延迟（即提前到达）
+        if (arrDelayMinutes <= 0) {
+            arrDelayColor = '#4CAF50'; // 绿色
+            arrDelayStatus = "Early Arrival";
+            isEarlyArrival = true;
+        } else if (arrDelayMinutes >= 60 || arrDelayProb >= 50) {
+            arrDelayColor = '#B71C1C'; // 深红色
+            arrDelayStatus = "Significant Delay";
+        } else if (arrDelayMinutes >= 35 || arrDelayProb >= 40) {
+            arrDelayColor = '#FF5252'; // 浅红色
+            arrDelayStatus = "Moderate Delay";
+        } else if (arrDelayMinutes >= 15 || arrDelayProb >= 30) {
+            arrDelayColor = '#FF9800'; // 橙色
+            arrDelayStatus = "Minor Delay";
+        }
+    }
+    
+    // 格式化到达延迟预测显示内容
+    const arrDelayProbDisplay = hasArrivalDelayPrediction 
+        ? `<span style="color: ${arrDelayColor}; font-weight: bold;">${(predictionResult.arrival_delay.probability * 100).toFixed(2)}%</span>
+           <span style="color: ${arrDelayColor}; font-weight: bold; margin-left: auto;">${arrDelayStatus}</span>`
+        : `<span style="color: #888; font-style: italic;">Data unavailable</span>`;
+    
+    // 为提前到达的情况调整显示文本
+    const arrDelayTimeDisplay = hasArrivalDelayPrediction
+        ? `<span style="color: ${arrDelayColor}; font-weight: bold;">
+            ${isEarlyArrival 
+                ? `${Math.abs(Math.round(predictionResult.arrival_delay.minutes))} minutes early` 
+                : `${Math.round(predictionResult.arrival_delay.minutes)} minutes`}
+           </span>`
+        : `<span style="color: #888; font-style: italic;">Data unavailable</span>`;
+
+    // 处理到达延迟置信区间显示
+    const hasArrConfidenceInterval = hasArrivalDelayPrediction && 
+                                   predictionResult.arrival_delay.confidence_interval &&
+                                   predictionResult.arrival_delay.confidence_interval.lower !== undefined &&
+                                   predictionResult.arrival_delay.confidence_interval.upper !== undefined;
+    
+    // 调整置信区间显示，确保负数延迟正确显示
+    const arrConfidenceIntervalDisplay = hasArrConfidenceInterval
+        ? `<span style="color: #666;">${isEarlyArrival
+            ? `[${Math.abs(Math.round(predictionResult.arrival_delay.confidence_interval.upper))}-${Math.abs(Math.round(predictionResult.arrival_delay.confidence_interval.lower))} mins early]`
+            : `[${Math.round(predictionResult.arrival_delay.confidence_interval.lower)}-${Math.round(predictionResult.arrival_delay.confidence_interval.upper)} mins]`
+          }</span>`
+        : '';
+
     // Display cancellation probability results
     // 创建容器盒子使卡片横向排布
     displayPanel.innerHTML = `
         <div class="cards-container" style="display: flex; flex-direction: row; flex-wrap: nowrap; overflow-x: auto; gap: 20px; padding: 10px 0;">
-            <div class="flight-card" style="flex: 0 0 auto; min-width: 350px; max-width: 400px; width: auto;">
+            <div class="flight-card" style="flex: 0 0 auto;">
                 <h3>Flight Prediction</h3>
                 <div class="flight-card-content">
                     <p style="display: flex; justify-content: space-between; align-items: center;">
@@ -184,12 +244,22 @@ function displayPredictionResult(flightData, predictionResult, displayPanel) {
                         ${cancelProbDisplay}
                     </p>
                     <p style="display: flex; justify-content: space-between; align-items: center;">
-                        <strong>Delay Probability:</strong>&nbsp;&nbsp;
+                        <strong>Dep-Delay Prob:</strong>&nbsp;&nbsp;
                         ${delayProbDisplay}
                     </p>
+                    <p style="display: flex; align-items: center;">
+                        <strong>Expected Dep-Delay:</strong>&nbsp;
+                        <span style="margin-right: auto;">${delayTimeDisplay}</span>
+                        <span>${confidenceIntervalDisplay}</span>
+                    </p>
                     <p style="display: flex; justify-content: space-between; align-items: center;">
-                        <strong>Expected Delay:</strong>&nbsp;&nbsp;
-                        ${delayTimeDisplay} ${confidenceIntervalDisplay}
+                        <strong>Arr-Delay Prob:</strong>&nbsp;&nbsp;
+                        ${arrDelayProbDisplay}
+                    </p>
+                    <p style="display: flex; align-items: center;">
+                        <strong>${isEarlyArrival ? 'Expected Early Arrival:' : 'Expected Arr-Delay:'}</strong>&nbsp;
+                        <span style="margin-right: auto;">${arrDelayTimeDisplay}</span>
+                        <span>${arrConfidenceIntervalDisplay}</span>
                     </p>
                     <p style="display: flex; justify-content: space-between; align-items: center;">
                         <strong>Red-eye Flight:</strong>&nbsp;&nbsp; ${redEyeDisplay}
@@ -221,7 +291,7 @@ function displayPredictionResult(flightData, predictionResult, displayPanel) {
             </div>
             
             <!-- 添加第二个卡片 -->
-            <div class="flight-card travel-tips-card" style="flex: 0 0 auto; min-width: 350px; max-width: 400px; width: auto;">
+            <div class="flight-card travel-tips-card" style="flex: 0 0 auto;">
                 <h3>Travel Tips</h3>
                 <div class="flight-card-content">
                     ${cancelProb > 3 ? 
@@ -232,8 +302,20 @@ function displayPredictionResult(flightData, predictionResult, displayPanel) {
                     }
                     ${hasDelayPrediction && predictionResult.predicted_delay_minutes > 20 ? 
                         `<div class="travel-alert" style="margin-top: ${cancelProb > 3 ? '10px' : '0'}">
-                            <p><strong>⏱️ Delay Alert</strong></p>
-                            <p>This flight has a significant chance of being delayed by about ${Math.round(predictionResult.predicted_delay_minutes)} minutes.</p>
+                            <p><strong>⏱️ Departure Delay Alert</strong></p>
+                            <p>This flight has a significant chance of delayed departure by about ${Math.round(predictionResult.predicted_delay_minutes)} minutes.</p>
+                        </div>` : ''
+                    }
+                    ${hasArrivalDelayPrediction && !isEarlyArrival && predictionResult.arrival_delay.minutes > 25 ? 
+                        `<div class="travel-alert" style="margin-top: ${(cancelProb > 3 || (hasDelayPrediction && predictionResult.predicted_delay_minutes > 20)) ? '10px' : '0'}">
+                            <p><strong>⏱️ Arrival Delay Alert</strong></p>
+                            <p>This flight is predicted to arrive about ${Math.round(predictionResult.arrival_delay.minutes)} minutes late at destination.</p>
+                        </div>` : ''
+                    }
+                    ${hasArrivalDelayPrediction && isEarlyArrival && Math.abs(predictionResult.arrival_delay.minutes) > 10 ? 
+                        `<div class="travel-alert" style="margin-top: ${(cancelProb > 3 || (hasDelayPrediction && predictionResult.predicted_delay_minutes > 20)) ? '10px' : '0'}; background-color: #DFF0D8; border-color: #4CAF50;">
+                            <p><strong>✅ Early Arrival Expected</strong></p>
+                            <p>Good news! This flight is predicted to arrive about ${Math.abs(Math.round(predictionResult.arrival_delay.minutes))} minutes early at destination.</p>
                         </div>` : ''
                     }
                     <h4>Recommended Actions:</h4>
@@ -268,7 +350,11 @@ function displayPredictionResult(flightData, predictionResult, displayPanel) {
                             ''
                         }
                         ${hasDelayPrediction && predictionResult.predicted_delay_minutes > 45 ? 
-                            '<li><strong>Check for alternative flights</strong> as this flight may experience significant delays.</li>' : 
+                            '<li><strong>Check for alternative flights</strong> as this flight may experience significant departure delays.</li>' : 
+                            ''
+                        }
+                        ${hasArrivalDelayPrediction && !isEarlyArrival && predictionResult.arrival_delay.minutes > 60 ? 
+                            '<li><strong>Consider earlier flights</strong> as this flight may arrive significantly delayed.</li>' : 
                             ''
                         }
                         <li>Check refund and rebooking policies for your ticket.</li>

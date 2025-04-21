@@ -166,7 +166,9 @@
     will-change: transform, box-shadow, background-color;
     cursor: pointer;
     user-select: none;
-    width: 32%; /* 设置卡片宽度为父容器的1/3 */
+    width: 50%; /* 增加卡片宽度从50%到80% */
+    min-width: 450px; /* 最小宽度 */
+    max-width: 500px; /* 最大宽度 */
     margin-left: 0; /* 确保卡片靠左对齐 */
     box-sizing: border-box; /* 确保padding不会增加总宽度 */
 }
@@ -391,4 +393,38 @@
   margin-left: 33%; /* 设置卡片左边距为33% */
   /* 设置卡片左边距为33% */
   box-sizing: border-box; /* 确保padding不会增加总宽度 */
+}
+
+/* 添加 .travel-tips-card 类的样式增强 */
+.flight-card.travel-tips-card {
+    min-width: 450px; /* 与flight-card一致的最小宽度 */
+    max-width: 600px; /* 与flight-card一致的最大宽度 */
+}
+
+/* 添加卡片容器样式 */
+.cards-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px 0;
+    /* 隐藏默认滚动条 */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+/* 为Webkit浏览器(Chrome, Safari)隐藏滚动条 */
+.cards-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* 添加卡片容器样式 */
+.cards-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px 0;
 }
