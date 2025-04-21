@@ -313,7 +313,7 @@ function displayPredictionResult(flightData, predictionResult, displayPanel) {
                         </div>` : ''
                     }
                     ${hasArrivalDelayPrediction && isEarlyArrival && Math.abs(predictionResult.arrival_delay.minutes) > 10 ? 
-                        `<div class="travel-alert" style="margin-top: ${(cancelProb > 3 || (hasDelayPrediction && predictionResult.predicted_delay_minutes > 20)) ? '10px' : '0'}; background-color: #DFF0D8; border-color: #4CAF50;">
+                        `<div class="travel-alert" style="margin-top: ${(cancelProb > 3 || (hasDelayPrediction && predictionResult.predicted_delay_minutes > 20)) ? '10px' : '0'};">
                             <p><strong>✅ Early Arrival Expected</strong></p>
                             <p>Good news! This flight is predicted to arrive about ${Math.abs(Math.round(predictionResult.arrival_delay.minutes))} minutes early at destination.</p>
                         </div>` : ''
